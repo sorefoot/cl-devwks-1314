@@ -104,7 +104,14 @@ Now we're ready to get started and build a workflow from a blank canvas!
 20. This time, we need to get the results from the Activities --> Ping 192.168.10.15 --> Response Body.  Click Save.
 21. Now you are ready to Validate and Run it again.  This time, don't click on an activity to see results, but rather scroll down in the Workflow Properties and see that your Ping results are assigned to a variable called *results*
 
-****Congratulations!  You have successfully built a workflow from scratch and connected to a remote host to run linux commands!
+#### Congratulations!  You have successfully built a workflow from scratch and connected to a remote host to run linux commands!
 
-**Bonus Content!  Run your automation from AI!
+## Bonus Content!  Run your automation from AI!
+Now comes the fun part!  We can trigger workflow automations from many different sources.  Let's try it from the AI Assistant.  
++ Open up the AI Assistant
++ Type the command:  via automation, pod [X] ping [Y] (where *X* is your pod number and *Y* is your favorite football player)  If this wasn't a shared resource you could use the command ping mbappe via automation and it would work but we should have a lot of these workflows similarly named.
++ Confirm that it selected your workflow correctly.
++ Watch the AI assistant run your workflow.  Upon successful completion, the workflow results variable will be displayed and will be available for evaluation and manipulation.
++ Try typing the command summarize the results of the ping in a table.
 
+ 
