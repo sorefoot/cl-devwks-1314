@@ -10,7 +10,7 @@ This session is designed to introduce you to Cisco Workflows and give you hands 
 * [Build a workflow without coding](#create-a-workflow)
 * [Bonus - Use AI to run your workflow](#bonus-content)
 
-____
+___
 ## Getting Started
 ### Lab Access
 Cisco Worklfows is hosted in the Meraki Dashboard.  Open a browswer and navigate to https://dashboard.meraki.com.    
