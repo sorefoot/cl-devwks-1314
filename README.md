@@ -28,6 +28,7 @@ You'll need to create an API Key if one isn't provided.  API keys are per user a
 2. Under *Configuration*, select *API & Webhooks*
 3. At the top, select the section called *API keys and access*
 4. Click on the blue *Generate API Key* button
+![screenshot](/media/1.png)
 5. Copy the API key and save it to the Scratch pad text file on the desktop
 6. Check the box stating you've safely stored your API key and click the Done button.
 
