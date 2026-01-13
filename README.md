@@ -47,7 +47,7 @@ ready for use.
 ![account key screenshot](/media/4.png)
 7. Hit save and check that the Status of your Target is blue and says Valid.
 
-####Congratulations!  You connected your first target to Workflows and can now begin automating Meraki solutions!
+#### Congratulations!  You connected your first target to Workflows and can now begin automating Meraki solutions!
 
 ## Install and run your first Workflow
 ### Now that we've connected Meraki, let's start setting up your networks.  
