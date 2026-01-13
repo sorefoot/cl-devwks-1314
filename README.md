@@ -1,12 +1,6 @@
 # cl-devwks-1314
 Cisco Live DevNet Workshop 1314
 # Automating with Cisco Workflows Introduction
-## Quick links to the different sections
-+ [Getting Started
-+ 
-+ [Install and run your first Workflow
-+ [Create a Workflow
-+ [Bonus Content: Run a workflow from the AI Assistant
 
 ## Learning Objectives
 This session is designed to introduce you to Cisco Workflows and give you hands on practice.
