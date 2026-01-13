@@ -11,13 +11,13 @@ This session is designed to introduce you to Cisco Workflows and give you hands 
 * [Bonus - Use AI to run your workflow](#bonus-content)
 
 ## Getting Started
-#### Lab Access
+### Lab Access
 Cisco Worklfows is hosted in the Meraki Dashboard.  Open a browswer and navigate to https://dashboard.meraki.com.    
 You'll use the credentials assigned to you by your Lab Admin.  
 The current username will be devwksuser+*[Pod #]*@gmail.com  
 The current password should be C1sco12345.
 
-#### Generate an API Key
+### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:
 1. Click on the Organization Menu
 2. Under *Configuration*, select *API & Webhooks*
@@ -29,14 +29,14 @@ You'll need to create an API Key if one isn't provided.  API keys are per user a
 ![API screenshot](/media/2.png)
 
 ## Connect Workflows to Meraki
-#### We'll need to connect Workflows to your lab environments.
+### We'll need to connect Workflows to your lab environments.
 
 Workflows offer pre-built automations (activities) for solutions such as Meraki, Catalyst
 Center, Catalyst SD-WAN, Cisco ISE, ServiceNow, and more. In this lab, we will walk you
 through key components of Workflows and demonstrate a pre-built Meraki workflow
 ready for use.
 
-##### First we'll create a connection to the Meraki environment via API.
+#### First we'll create a connection to the Meraki environment via API.
 1. Under the Automation menu, select Targets.
 2. Click the box + New target
 ![Target screenshot](/media/3.png)
@@ -47,13 +47,13 @@ ready for use.
 ![account key screenshot](/media/4.png)
 7. Hit save and check that the Status of your Target is blue and says Valid.
 
-Congratulations!  You connected your first target to Workflows and can now begin automating Meraki solutions!
+####Congratulations!  You connected your first target to Workflows and can now begin automating Meraki solutions!
 
 ## Install and run your first Workflow
-#### Now that we've connected Meraki, let's start setting up your networks.  
+### Now that we've connected Meraki, let's start setting up your networks.  
 
 The Exchange allows you to install workflows that are created and supported by Cisco and others to facilitate your journey of automation with zero to minimal coding experience.  Let's start with a pre-built workflow to setup wireless.
-#### Let's install your first workflow from the Exchange
+### Let's install your first workflow from the Exchange
 1. Under the Automation menu, select Exchange.
 2. Find the workflow called *Create Wireless SSID with PSK Authentication* and click the Install button.
 ![exchange screenshot](/media/5.png)
@@ -64,7 +64,7 @@ The Exchange allows you to install workflows that are created and supported by C
 5. Click Next and it will begin installing the workflow.  You should get an Installation Succeeded pop-up shortly.  Choose *Maybe later* when asked if you'd like to automate it to proceed.
 ![install success screenshot](/media/8.png)
 
-#### Now let's run that workflow
+### Now let's run that workflow
 1. Under the Automation menu, select Workspace.
 2. You should see your new Worklow installed at the top.  Click on the ellipsus/meatball menu button and select Run.
 ![run workflow screenshot](/media/9.png)
@@ -86,7 +86,7 @@ The Exchange allows you to install workflows that are created and supported by C
 Verify under the Copenhagen network that the wireless settings are configured successfully.
 
 ## Create a workflow 
-#### Remote Targets
+### Remote Targets
 Remote Targets is a virtual appliance that enables your workflows to communicate with resources inside your network that do not have access to the internet. Because many user-deployed devices are not exposed to the internet, Remote Targets bridges the gap between those devices and the cloud so that they can be incorporated into your workflows. [Link to docs](https://documentation.meraki.com/Platform_Management/Workflows/Targets/Automation_Remote)
 
 You have access to a shared Organization that includes a remote server already deployed in an on-premises lab. Within this Organization, there is also a newly configured target called Linux Host (a Unix/Linux endpoint). Access to this target is made through the remote server.  
@@ -94,7 +94,7 @@ You are welcome to review the configuration, but **please do not make any change
 In this section, you will create a workflow to run commands (such as ping) on the Linux Host. **When naming your workflow, please use a unique name to avoid conflicts with others.**
 
 Now we're ready to get started and build a workflow from a blank canvas!
-####Create a workflow from scratch
+### Create a workflow from scratch
 1. Under the Automation menu, select Workspace.
 2. On the top right, select the blue *+ Create* button.
 ![create workflow screenshot](/media/12.png)
@@ -134,7 +134,7 @@ Now we're ready to get started and build a workflow from a blank canvas!
 #### Congratulations!  You have successfully built a workflow from scratch and connected to a remote host to run linux commands!
 
 ## Bonus Content 
-#### Run your automation from AI!
+### Run your automation from AI!
 Now comes the fun part!  We can trigger workflow automations from many different sources.  Let's try it from the AI Assistant.  
 + Open up the AI Assistant
 + Type the command:  via automation, pod [X] ping [Y] (where *X* is your pod number and *Y* is your favorite football player)  If this wasn't a shared resource you could use the command ping mbappe via automation and it would work but we should have a lot of these workflows similarly named.
