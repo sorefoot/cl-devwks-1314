@@ -24,7 +24,7 @@ You'll need to create an API Key if one isn't provided.  API keys are per user a
 3. At the top, select the section called *API keys and access*
 4. Click on the blue *Generate API Key* button
 ![Menu screenshot](/media/1.png)
-5. Copy the API key and save it to the Scratch pad text file on the desktop
+5. Copy the API key and save it to a text file on the desktop
 6. Check the box stating you've safely stored your API key and click the Done button.
 ![API screenshot](/media/2.png)
 
@@ -39,10 +39,12 @@ ready for use.
 ##### First we'll create a connection to the Meraki environment via API.
 1. Under the Automation menu, select Targets.
 2. Click the box + New target
+![Target screenshot](/media/3.png)
 3. Select Target Type:  Meraki Endpoint
 4. Display Name: Meraki-DEVWKS1314-*[Pod #]*
 5. Select the Account Key.  If one exists, choose it.  If not, Add new.
-6. To add/edit an Account Key, Add the name Meraki API and add the API Key generated in the last section.
+6. To add/edit an Account Key, Add the name Meraki API and paste the API Key generated in the last section.
+![account key screenshot](/media/4.png)
 7. Hit save and check that the Status of your Target is blue and says Valid.
 
 Congratulations!  You connected your first target to Workflows and can now begin automating Meraki solutions!
