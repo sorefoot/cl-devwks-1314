@@ -2,18 +2,19 @@
 Cisco Live DevNet Workshop 1314
 # Automating with Cisco Workflows Introduction
 ## Quick links to the different sections
-+ [Getting Started](#lab-access)
-+ [Connect Workflows to Meraki](#connect-workflows-to-meraki)
-+ [Install and run your first Workflow](#install-and-run-your-first-workflow)
-+ [Create a Workflow](#create-a-workflow)
-+ [Bonus Content: Run a workflow from the AI Assistant](#bonus-content)
++ [Getting Started
++ 
++ [Install and run your first Workflow
++ [Create a Workflow
++ [Bonus Content: Run a workflow from the AI Assistant
 
 ## Learning Objectives
 This session is designed to introduce you to Cisco Workflows and give you hands on practice.
-* Setup connects to external environments
-* Install and run a pre-built workflow
-* Build a workflow without coding
-* Bonus - Use AI to run your workflow
+* [Getting started and connect to lab environment](#getting-started)
+* [Connect Workflows to Meraki](#connect-workflows-to-meraki)
+* [Install and run a pre-built workflow](#install-and-run-your-first-workflow)
+* [Build a workflow without coding](#create-a-workflow)
+* [Bonus - Use AI to run your workflow](#bonus-content)
 
 ## Getting Started
 #### Lab Access
@@ -28,9 +29,10 @@ You'll need to create an API Key if one isn't provided.  API keys are per user a
 2. Under *Configuration*, select *API & Webhooks*
 3. At the top, select the section called *API keys and access*
 4. Click on the blue *Generate API Key* button
-![screenshot](/media/1.png)
+![Menu screenshot](/media/1.png)
 5. Copy the API key and save it to the Scratch pad text file on the desktop
 6. Check the box stating you've safely stored your API key and click the Done button.
+![API screenshot](/media/2.png)
 
 ## Connect Workflows to Meraki
 #### We'll need to connect Workflows to your lab environments.
