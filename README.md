@@ -29,6 +29,7 @@ You'll need to create an API Key if one isn't provided.  API keys are per user a
 6. Check the box stating you've safely stored your API key and click the Done button.
 ![API screenshot](/media/2.png)
 
+___
 ## Connect Workflows to Meraki
 ### We'll need to connect Workflows to your lab environments.
 
@@ -50,6 +51,7 @@ ready for use.
 
 #### Congratulations!  You connected your first target to Workflows and can now begin automating Meraki solutions!
 
+___
 ## Install and run your first Workflow
 ### Now that we've connected Meraki, let's start setting up your networks.  
 
@@ -86,6 +88,7 @@ The Exchange allows you to install workflows that are created and supported by C
 
 Verify under the Copenhagen network that the wireless settings are configured successfully.
 
+___
 ## Create a workflow 
 ### Remote Targets
 Remote Targets is a virtual appliance that enables your workflows to communicate with resources inside your network that do not have access to the internet. Because many user-deployed devices are not exposed to the internet, Remote Targets bridges the gap between those devices and the cloud so that they can be incorporated into your workflows. [Link to docs](https://documentation.meraki.com/Platform_Management/Workflows/Targets/Automation_Remote)
@@ -134,6 +137,7 @@ Now we're ready to get started and build a workflow from a blank canvas!
 
 #### Congratulations!  You have successfully built a workflow from scratch and connected to a remote host to run linux commands!
 
+___
 ## Bonus Content 
 ### Run your automation from AI!
 Now comes the fun part!  We can trigger workflow automations from many different sources.  Let's try it from the AI Assistant.  
