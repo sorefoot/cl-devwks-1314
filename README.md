@@ -50,7 +50,7 @@ ready for use.
 
 Congratulations!  You connected your first target to Workflows and can now begin automating Meraki solutions!
 
-## Install and Run your first Workflow
+## Install and run your first Workflow
 #### Now that we've connected Meraki, let's start setting up your networks.  
 
 The Exchange allows you to install workflows that are created and supported by Cisco and others to facilitate your journey of automation with zero to minimal coding experience.  Let's start with a pre-built workflow to setup wireless.
@@ -112,7 +112,7 @@ Now we're ready to get started and build a workflow from a blank canvas!
 
 #### Congratulations!  You have successfully built a workflow from scratch and connected to a remote host to run linux commands!
 
-## Bonus Content! 
+## Bonus Content 
 #### Run your automation from AI!
 Now comes the fun part!  We can trigger workflow automations from many different sources.  Let's try it from the AI Assistant.  
 + Open up the AI Assistant
