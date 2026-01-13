@@ -6,7 +6,7 @@ Cisco Live DevNet Workshop 1314
 + [Connect Workflows to Meraki](#connect-workflows-to-meraki)
 + [Install and run your first Workflow](#install-and-run-your-first-workflow)
 + [Create a Workflow](#create-a-workflow)
-+ [Bonus Content: Run a workflow from the AI Assistant](#bonus-content!-run-your-automation-from-ai!)
++ [Bonus Content: Run a workflow from the AI Assistant](#bonus-content!)
 
 ## Learning Objectives
 This session is designed to introduce you to Cisco Workflows and give you hands on practice.
@@ -112,7 +112,8 @@ Now we're ready to get started and build a workflow from a blank canvas!
 
 #### Congratulations!  You have successfully built a workflow from scratch and connected to a remote host to run linux commands!
 
-## Bonus Content!  Run your automation from AI!
+## Bonus Content! 
+#### Run your automation from AI!
 Now comes the fun part!  We can trigger workflow automations from many different sources.  Let's try it from the AI Assistant.  
 + Open up the AI Assistant
 + Type the command:  via automation, pod [X] ping [Y] (where *X* is your pod number and *Y* is your favorite football player)  If this wasn't a shared resource you could use the command ping mbappe via automation and it would work but we should have a lot of these workflows similarly named.
