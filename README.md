@@ -56,13 +56,18 @@ The Exchange allows you to install workflows that are created and supported by C
 #### Let's install your first workflow from the Exchange
 1. Under the Automation menu, select Exchange.
 2. Find the workflow called *Create Wireless SSID with PSK Authentication* and click the Install button.
+![exchange screenshot](/media/5.png)
 3. This will describe all the pieces included with this workflow and what it does.  Click Install.
+![workflow screenshot](/media/6.png)
 4. Some worklows need information from you specific to your environment before running.  This workflow is asking for the PSK.  Enter a PSK of your liking.  You can also choose to skip this configuration and have it prompt later when running it if desired.
+![details screenshot](/media/7.png)
 5. Click Next and it will begin installing the workflow.  You should get an Installation Succeeded pop-up shortly.  Choose *Maybe later* when asked if you'd like to automate it to proceed.
+![install success screenshot](/media/8.png)
 
 #### Now let's run that workflow
 1. Under the Automation menu, select Workspace.
 2. You should see your new Worklow installed at the top.  Click on the ellipsus/meatball menu button and select Run.
+![run workflow screenshot](/media/9.png)
 3. The workflow is created with case sensitive input variables.  You will be prompted to fill out the information needed to setup wireless in this network.  Use the following info:
    + Target: Select your target created earlier Meraki-DEVWKS1314-X
    + PSK Password:  Should be filled out when installing the workflow.
@@ -73,7 +78,9 @@ The Exchange allows you to install workflows that are created and supported by C
    + Network Name:  Copenhagen
    + Enable SSID: True
    + WPA Encryption Mode:  WPA2 only
+![form screenshot](/media/10.png)
 4. Click Run and watch your workflow begin.  Blue boxes are "running".  Green boxes are completed successfullly.  Red boxes completed with errors.  If you have any red boxes, please raise your hand and we'll come help you figure out what happened.
+![running workflow screenshot](/media/11.png)
 5. You can view the results of workflows previously ran under the *Run Monitoring* menu option as well.
 
 Verify under the Copenhagen network that the wireless settings are configured successfully.
