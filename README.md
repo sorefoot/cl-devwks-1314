@@ -6,7 +6,7 @@ Cisco Live DevNet Workshop 1314
 + [Connect Workflows to Meraki](#connect-workflows-to-meraki)
 + [Install and run your first Workflow](#install-and-run-your-first-workflow)
 + [Create a Workflow](#create-a-workflow)
-+ [Bonus Content: Run a workflow from the AI Assistant](#bonus-content!)
++ [Bonus Content: Run a workflow from the AI Assistant](#bonus-content)
 
 ## Learning Objectives
 This session is designed to introduce you to Cisco Workflows and give you hands on practice.
