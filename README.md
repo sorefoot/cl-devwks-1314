@@ -40,7 +40,7 @@ through key components of Workflows and demonstrate a pre-built Meraki workflow
 ready for use.
 
 #### First we'll create a connection to the Meraki environment via API.
-> ⭐⭐Remember to use the **WKS-1314 Pod** Organization
+> ⭐⭐ Remember to use the **WKS-1314 Pod** Organization ⭐⭐
 1. Under the Automation menu, select Targets.
 2. Click the box + New target
 ![Target screenshot](/media/3.png)
@@ -103,7 +103,7 @@ In this section, you will create a workflow to run commands (such as ping) on th
 
 Now we're ready to get started and build a workflow from a blank canvas!
 ### Create a workflow from scratch
-> ⭐⭐Remember to switch to the **zzCLEMEA Bighorn** Organization
+> ⭐⭐ Remember to switch to the **zzCLEMEA Bighorn** Organization ⭐⭐
 1. Under the Automation menu, select Workspace.
 2. On the top right, select the blue *+ Create* button.
 ![create workflow screenshot](/media/12.png)
