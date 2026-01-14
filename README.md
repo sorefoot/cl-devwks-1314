@@ -17,7 +17,7 @@ Cisco Worklfows is hosted in the Meraki Dashboard.  Open a browswer and navigate
 You'll use the credentials assigned to you by your Lab Admin.  
 The current username will be devwksuser+*[Pod #]*@proton.me  
 The current password should be C1sco12345  
-==Your user should have access to two organizations.  Please ensure you are using the WKS-1314 Pod*X* organization and **NOT the zzCLEMEA Bighorn** Organization.  If you don't see the WKS-1314 Pod*x* org, please contact the lab proctor.==
+> ⭐⭐ Your user should have access to two organizations.  Please ensure you are using the WKS-1314 Pod*X* organization and **NOT the zzCLEMEA Bighorn** Organization.  If you don't see the WKS-1314 Pod*x* org, please contact the lab proctor.
 
 ### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:
@@ -40,7 +40,7 @@ through key components of Workflows and demonstrate a pre-built Meraki workflow
 ready for use.
 
 #### First we'll create a connection to the Meraki environment via API.
-==Remember to use the **WKS-1314 Pod** Organization==
+> ⭐⭐Remember to use the **WKS-1314 Pod** Organization
 1. Under the Automation menu, select Targets.
 2. Click the box + New target
 ![Target screenshot](/media/3.png)
@@ -101,7 +101,7 @@ In this section, you will create a workflow to run commands (such as ping) on th
 
 Now we're ready to get started and build a workflow from a blank canvas!
 ### Create a workflow from scratch
-> Remember to switch to the **zzCLEMEA Bighorn** Organization
+> ⭐⭐Remember to switch to the **zzCLEMEA Bighorn** Organization
 1. Under the Automation menu, select Workspace.
 2. On the top right, select the blue *+ Create* button.
 ![create workflow screenshot](/media/12.png)
