@@ -96,7 +96,9 @@ ___
 Remote Targets is a virtual appliance that enables your workflows to communicate with resources inside your network that do not have access to the internet. Because many user-deployed devices are not exposed to the internet, Remote Targets bridges the gap between those devices and the cloud so that they can be incorporated into your workflows. [Link to docs](https://documentation.meraki.com/Platform_Management/Workflows/Targets/Automation_Remote)
 
 You have access to a shared Organization called *zzCLEMEA Bighorn* that includes a remote server already deployed in an on-premises lab. Within this Organization, there is also a newly configured target called Linux Host (a Unix/Linux endpoint). Access to this target is made through the remote server.  
+  
 You are welcome to review the configuration, but **please do not make any changes**-this is a shared environment, and modifications could disrupt the lab for other users.  
+  
 In this section, you will create a workflow to run commands (such as ping) on the Linux Host. **When naming your workflow, please use a unique name to avoid conflicts with others.**
 
 Now we're ready to get started and build a workflow from a blank canvas!
