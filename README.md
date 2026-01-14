@@ -103,7 +103,7 @@ In this section, you will create a workflow to run commands (such as ping) on th
 
 Now we're ready to get started and build a workflow from a blank canvas!
 ### Create a workflow from scratch
-> ⭐⭐ Remember to switch to the **zzCLEMEA Bighorn** Organization ⭐⭐
+> ⭐⭐ $${\color{orange}Remember \space to \space switch \space to \space the \space \color{green}**zzCLEMEA \space Bighorn** \space \color{orange}Organization}$$  ⭐⭐
 1. Under the Automation menu, select Workspace.
 2. On the top right, select the blue *+ Create* button.
 ![create workflow screenshot](/media/12.png)
@@ -122,7 +122,7 @@ Now we're ready to get started and build a workflow from a blank canvas!
 9. We will be changing the name of the activity and the Input Command.  Let's test our VM host to see if it's up and running.  I'm going to test by pinging the server.  Since pings on linux servers don't have a predetermined count, we will add the count to ensure that the command is successfully completed.  Under the Unix/Linux section, enter the Input Command of *ping 192.168.10.15 -c5*
 ![command screenshot](/media/19.png)
 10. Scroll up and change the Display name to the same command you put in the input field to help understand what the activity is.  Finally click the workflow canvas area and notice that the yellow warnings are gone.
-11. Your workflow is ready to be validated and run now that the warnings are gone.  Click the Validate and Run buttons to see if it worked.  The activity should have a green bar at the top indicating a successful run and the workflow will have the green word $${\color{green}SUCCESS}$$ next to it.  If it's red, please raise your hand and we'll help you troubleshoot what went wrong.
+11. Your workflow is ready to be validated and run now that the warnings are gone.  Click the Validate and Run buttons to see if it worked.  The activity should have a green bar at the top indicating a successful run and the workflow will have $${\color{green}SUCCESS}$$ next to it.  If it's $${\color{red}FAILED}$$, please raise your hand and we'll help you troubleshoot what went wrong.
 12. Success or fail, click on the activity to see the results.  This will help us see what is happening and how we can fix it.  On the right column, scroll down until you see the results of the activity.  The Output is displayed nicely in a readable format as well as a JSON format. Note the Response body section.  It will have the results of your command.
 ![results screenshot](/media/20.png)
 13. Now that we know what the results are, let's use them.  We can use them in a following activity and in this case, we're going to assign them to an Output variable that we can use outside this workflow.  Let's get back into your workflow.  Click the *Modify* button in the top right to bring us back into the workflow editor.
