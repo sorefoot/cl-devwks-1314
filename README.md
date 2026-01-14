@@ -16,7 +16,8 @@ ___
 Cisco Worklfows is hosted in the Meraki Dashboard.  Open a browswer and navigate to https://dashboard.meraki.com.    
 You'll use the credentials assigned to you by your Lab Admin.  
 The current username will be devwksuser+*[Pod #]*@proton.me  
-The current password should be C1sco12345
+The current password should be C1sco12345  
+Your user should have access to two organizations.  Please ensure you are using the WKS-1314 Pod*X* organization and **not** the CLEM Bighorn Organization.
 
 ### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:
