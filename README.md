@@ -18,7 +18,7 @@ You'll use the credentials assigned to you by your Lab Admin.
 The current username will be devwksuser+*[Pod #]*@proton.me  
 The current password should be C1sco12345  
 > [!NOTE]
->  ⭐⭐ Youruser should have access to two organizations.  Please ensure you are using the WKS-1314 Pod*X* organization and **NOT the zzCLEMEA Bighorn** Organization.  If you don't see the WKS-1314 Pod*x* org, please contact the lab proctor.
+>  ⭐⭐ Your user should have access to two organizations.  Please ensure you are using the WKS-1314 Pod*X* organization and **NOT the zzCLEMEA Bighorn** Organization.  If you don't see the WKS-1314 Pod*x* org, please contact the lab proctor.
 
 ### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:
@@ -41,6 +41,7 @@ through key components of Workflows and demonstrate a pre-built Meraki workflow
 ready for use.
 
 #### First we'll create a connection to the Meraki environment via API.
+> [!IMPORTANT]
 > ⭐⭐ $${\color{orange}Remember}$$ $${\color{orange}to}$$ $${\color{orange}use}$$ $${\color{orange}the}$$ **$${\color{green}WKS-1314}$$ $${\color{green}Pod}$$** $${\color{orange}Organization}$$ ⭐⭐
 1. Under the Automation menu, select Targets.
 2. Click the box + New target
