@@ -18,7 +18,7 @@ You'll use the credentials assigned to you by your Lab Admin.
 The current username will be devwksuser+*[Pod #]*@proton.me  
 The current password should be C1sco12345  
 > [!NOTE]
->  ⭐⭐ Your user should have access to two organizations.  Please ensure you are using the WKS-1314 Pod*X* organization and **NOT the zzCLEMEA Bighorn** Organization.  If you don't see the WKS-1314 Pod*x* org, please contact the lab proctor.
+>  ⭐⭐ Your user should have access to two organizations.  Please ensure you are using the **WKS-1314 Pod*X*** organization and **NOT the zzCLEMEA Bighorn** Organization.  If you don't see the WKS-1314 Pod*x* org, please contact the lab proctor.
 
 ### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:
@@ -98,7 +98,7 @@ ___
 Remote Targets is a virtual appliance that enables your workflows to communicate with resources inside your network that do not have access to the internet. Because many user-deployed devices are not exposed to the internet, Remote Targets bridges the gap between those devices and the cloud so that they can be incorporated into your workflows. [Link to docs](https://documentation.meraki.com/Platform_Management/Workflows/Targets/Automation_Remote)
 
 >[!NOTE]
->You have access to a shared Organization called *zzCLEMEA Bighorn* that includes a remote server already deployed in an on-premises lab. Within this Organization, there is also a newly configured target called Linux Host (a Unix/Linux endpoint). Access to this target is made through the remote server.
+>You have access to a shared Organization called  **$${\color{green}zzCLEMEA}$$ $${\color{green}Bighorn}$$** that includes a remote server already deployed in an on-premises lab. Within this Organization, there is also a newly configured target called Linux Host (a Unix/Linux endpoint). Access to this target is made through the remote server.
 >You are welcome to review the configuration, but **please do not make any changes**-this is a shared environment, and modifications could disrupt the lab for other users.  
   
 In this section, you will create a workflow to run commands (such as ping) on the Linux Host. **When naming your workflow, please use a unique name to avoid conflicts with others.**
