@@ -103,7 +103,7 @@ In this section, you will create a workflow to run commands (such as ping) on th
 
 Now we're ready to get started and build a workflow from a blank canvas!
 ### Create a workflow from scratch
-⭐⭐ $${\color{orange}Remember}$$ $${\color{red}to switch to the \color{green}**zzCLEMEA Bighorn** \color{orange}Organization}$$  ⭐⭐
+⭐⭐ $${\color{orange}Remember}$$ $${\color{orange}to}$$ $${\color{orange}switch}$$ $${\color{orange}to}$$ $${\color{orange}the}$$ **$${\color{green}zzCLEMEA}$$ $${\color{green}Bighorn}$$** $${\color{orange}Organization}$$  ⭐⭐
 1. Under the Automation menu, select Workspace.
 2. On the top right, select the blue *+ Create* button.
 ![create workflow screenshot](/media/12.png)
