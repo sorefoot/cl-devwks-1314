@@ -8,7 +8,8 @@ This session is designed to introduce you to Cisco Workflows and give you hands 
 * [Connect Workflows to Meraki](#connect-workflows-to-meraki)
 * [Install and run a pre-built workflow](#install-and-run-your-first-workflow)
 * [Build a workflow without coding](#create-a-workflow)
-* [Bonus - Use AI to run your workflow](#bonus-content)
+* [Side Quest - Use AI to run your workflow](#side-quest)
+* [Github and Importing shared work](#github-sharing)
 
 ___
 ## Getting Started
@@ -146,7 +147,7 @@ Now we're ready to get started and build a workflow from a blank canvas!
 #### Congratulations!  You have successfully built a workflow from scratch and connected to a remote host to run linux commands!
 
 ___
-## Bonus Content 
+## Side Quest 
 ### Run your automation from AI!
 Now comes the fun part!  We can trigger workflow automations from many different sources.  Let's try it from the AI Assistant.  
 + Open up the AI Assistant
@@ -155,4 +156,9 @@ Now comes the fun part!  We can trigger workflow automations from many different
 + Watch the AI assistant run your workflow.  Upon successful completion, the workflow results variable will be displayed and will be available for evaluation and manipulation.
 + Try typing the command summarize the results of the ping in a table.
 
+ ___
+ ## Github Sharing
+ ### Sharing work helps increase success and growth
+ 
+ 
  
