@@ -40,7 +40,7 @@ through key components of Workflows and demonstrate a pre-built Meraki workflow
 ready for use.
 
 #### First we'll create a connection to the Meraki environment via API.
-> ⭐⭐ Remember}$$ $${\color{orange}to}$$ $${\color{orange}use}$$ $${\color{orange}the}$$ **$${\color{green}WKS-1314}$$ $${\color{green}Pod}$$** $${\color{orange}Organization}$$ ⭐⭐
+> ⭐⭐ $${\color{orange}Remember}$$ $${\color{orange}to}$$ $${\color{orange}use}$$ $${\color{orange}the}$$ **$${\color{green}WKS-1314}$$ $${\color{green}Pod}$$** $${\color{orange}Organization}$$ ⭐⭐
 1. Under the Automation menu, select Targets.
 2. Click the box + New target
 ![Target screenshot](/media/3.png)
