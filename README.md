@@ -248,9 +248,11 @@ Now comes the fun part!  We can trigger workflow automations from many different
 3. Either select all from the raw JSON or click the copy button on the top right.
 
 [!github screenshot](/media/26.png)
-<details>
-<summary>The JSON is also found here: </summary> 
-```
+
+<details> 
+   <summary>JSON is also here:  </summary>
+   
+```json
 {
   "workflow": {
     "unique_name": "definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe",
@@ -758,7 +760,6 @@ Now comes the fun part!  We can trigger workflow automations from many different
 }
 ```
 </details>
-
 4.  
  
  
