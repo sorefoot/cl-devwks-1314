@@ -250,7 +250,7 @@ Now comes the fun part!  We can trigger workflow automations from many different
 [!github screenshot](/media/26.png)
 <details>
 <summary>The JSON is also found here: </summary> 
-```json
+```
 {
   "workflow": {
     "unique_name": "definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe",
