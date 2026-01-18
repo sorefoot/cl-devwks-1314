@@ -238,9 +238,8 @@ Now comes the fun part!  We can trigger workflow automations from many different
 
  We are going to go back to your Pod and import a workflow from a GitHub Repo.
 
-> [!IMPORTANT]
-> ⭐⭐ Change your org to use the **$${\color{green}WKS-1314}$$ $${\color{green}Pod}$$** Organization ⭐⭐
- 
+### Find the new Workflow on Github
+
 1. Navigate to https://github.com/sorefoot/Cisco-Workflows/ and click on the Meraki SSID Mover folder.
 
 2. This JSON file includes all of the activities configured and setup for you.  You can import the file or the raw JSON.  We're going to copy the raw JSON from the Github repo.
@@ -759,9 +758,22 @@ Now comes the fun part!  We can trigger workflow automations from many different
   ]
 }
 ```
-</details>
+</details>  
+
+ ## Let's import the workflow into your Pod.
+
+> [!IMPORTANT]
+> ⭐⭐ Change your org to use the **$${\color{green}WKS-1314}$$ $${\color{green}Pod}$$** Organization ⭐⭐
+1.  Under the Automation menu, select Workspace to get back to your workflows.
+
+2.  Click on the Actions button and select Import Workflow.
+ 
+ [!import screenshot](/media/27.png)
+
+3.  Paste the json into the window and select Import.
+
+[!github import screenshot](/media/28.png)
+
 4.  
- 
- 
  
  
