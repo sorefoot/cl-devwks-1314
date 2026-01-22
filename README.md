@@ -600,11 +600,11 @@ Now comes the fun part!  We can trigger workflow automations from many different
 6.  Now you can Validate and Run the workflow.
 
 7.  You'll need to input the following values:
-    +  Organization name:  $${\color{green}DEVWKS-1314 Pod X$$ [X is your pod number]
-    +  Network name:  $${\color{green}Copenhagen$$
-    +  RF Profile name:  $${\color{green}WIFI 7 RF Profile$$
-    +  5GHz channel width:  $${\color{green}40$$
-    +  6GHz channel width:  $${\color{green}auto$$
+    +  Organization name:  $${\color{green}DEVWKS-1314 Pod X}$$ [X is your pod number]
+    +  Network name:  $${\color{green}Copenhagen}$$
+    +  RF Profile name:  $${\color{green}WIFI 7 RF Profile}$$
+    +  5GHz channel width:  $${\color{green}40}$$
+    +  6GHz channel width:  $${\color{green}auto}$$
 
 8.  Run your workflow and validate that the profile is created.
 
