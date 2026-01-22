@@ -13,7 +13,8 @@ This session is designed to introduce you to Cisco Workflows and give you hands 
 
 ___
 ## Getting Started
-### Lab Access
+### Lab Access  
+
 Cisco Workflows is hosted in the Meraki Dashboard.  Open a browswer and navigate to https://dashboard.meraki.com.    
 You'll use the credentials assigned to you by your Lab Admin.  
 The current username will be devwksuser+*[Pod #]*@proton.me  
