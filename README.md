@@ -18,8 +18,9 @@ Cisco Workflows is hosted in the Meraki Dashboard.  Open a browswer and navigate
 You'll use the credentials assigned to you by your Lab Admin.  
 The current username will be devwksuser+*[Pod #]*@proton.me  
 The current password should be C1sco12345  
+If you are prompted for 2FA, please raise your hand.
 > [!NOTE]
->  ⭐⭐ Your user should have access to two organizations.  Please ensure you are using the **WKS-1314 Pod*X*** organization and **NOT the zzCLEMEA Bighorn** Organization.  If you don't see the **WKS-1314 Pod*X*** org, please raise your hand.
+>  ⭐⭐ Your user should have access to two organizations.  Please ensure you are using the **DEVWKS-1314 Pod*X*** organization and **NOT the zzCLEMEA Bighorn** Organization.  If you don't see the **DEVWKS-1314 Pod*X*** org, please raise your hand.
 
 ### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:  
@@ -51,7 +52,7 @@ ready for use.
 
 #### First we'll create a connection to the Meraki environment via API.
 > [!IMPORTANT]
-> ⭐⭐ Remember to use the **$${\color{green}WKS-1314}$$ $${\color{green}Pod}$$** Organization ⭐⭐
+> ⭐⭐ Remember to use the **$${\color{green}DEVWKS-1314}$$ $${\color{green}Pod}$$** Organization ⭐⭐
 
 1. Under the Automation menu, select Targets.  
 
@@ -110,7 +111,7 @@ The Exchange allows you to install workflows that are created and supported by C
    + Encryption Mode:  wpa
    + SSID Number: 0
    + Wireless SSID Name:  Cisco Live Wireless
-   + Organization Name or ID:  Pod - X [X is your pod number]
+   + Organization Name or ID:  DEVWKS-1314 Pod X [X is your pod number]
    + Network Name:  Copenhagen
    + Enable SSID: True
    + WPA Encryption Mode:  WPA2 only
@@ -240,7 +241,7 @@ Now comes the fun part!  We can trigger workflow automations from many different
 
 ### Find the new Workflow on Github
 
-1. Navigate to https://github.com/sorefoot/Cisco-Workflows/ and click on the Meraki SSID Mover folder.
+1. Navigate to https://github.com/sorefoot/Cisco-Workflows/ and click on the [Meraki Create RF Profile](https://github.com/sorefoot/Cisco-Workflows/blob/main/MerakiCreateRFProfile__definition_workflow_02MSGUYUJMKKG2BJUI2JYQ4EBifLWskHnN2) folder.
 
 2. This JSON file includes all of the activities configured and setup for you.  You can import the file or the raw JSON.  We're going to copy the raw JSON from the Github repo.
 
@@ -254,9 +255,9 @@ Now comes the fun part!  We can trigger workflow automations from many different
 ```json
 {
   "workflow": {
-    "unique_name": "definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe",
-    "name": "Wireless SSID Mover",
-    "title": "Wireless SSID Mover",
+    "unique_name": "definition_workflow_02MSGUYUJMKKG2BJUI2JYQ4EBifLWskHnN2",
+    "name": "Meraki - Create RF Profile",
+    "title": "Meraki - Create RF Profile",
     "type": "generic.workflow",
     "base_type": "workflow",
     "variables": [
@@ -265,29 +266,61 @@ Now comes the fun part!  We can trigger workflow automations from many different
         "properties": {
           "value": "",
           "scope": "input",
-          "name": "Source SSID Number",
+          "name": "RF Profile Name",
           "type": "datatype.string",
-          "is_required": false,
+          "is_required": true,
           "display_on_wizard": false,
           "is_invisible": false,
           "variable_string_format": ""
         },
-        "unique_name": "variable_workflow_02RW1YUN3L8GO5Ig15vOrBoWcZHU1FWjbzU",
+        "unique_name": "variable_workflow_02STFZLZQHP617iLOMJ1qB7tC13uCqNKRtK",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
-          "scope": "local",
-          "name": "OrgID",
+          "scope": "input",
+          "name": "5gHz Channel Width",
           "type": "datatype.string",
+          "description": "\"20\", \"40\", \"80\", \"160\", \"auto\"",
           "is_required": false,
           "display_on_wizard": false,
           "is_invisible": false,
           "variable_string_format": ""
         },
-        "unique_name": "variable_workflow_02STCIXPIM7DK5O9t9WqvNZoq0FV58sPFWr",
+        "unique_name": "variable_workflow_02STG1W31X6QK6qNTTJLwGfSw69t7Ajwt1r",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Org Name/ID",
+          "type": "datatype.string",
+          "is_required": true,
+          "display_on_wizard": true,
+          "is_invisible": false,
+          "variable_string_format": "text"
+        },
+        "unique_name": "variable_workflow_02MSGUYVPFZ2J4oWU4Edqs8qSG3TIidS4EA",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "6gHz Channel Width",
+          "type": "datatype.string",
+          "description": "\"20\", \"40\", \"80\", \"160\", \"auto\"",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false,
+          "variable_string_format": ""
+        },
+        "unique_name": "variable_workflow_02STG2XH3XB4V7VEbZacl1CiiW2K1higoCt",
         "object_type": "variable_workflow"
       },
       {
@@ -297,27 +330,12 @@ Now comes the fun part!  We can trigger workflow automations from many different
           "scope": "input",
           "name": "Network Name",
           "type": "datatype.string",
-          "is_required": false,
+          "is_required": true,
           "display_on_wizard": false,
           "is_invisible": false,
-          "variable_string_format": ""
+          "variable_string_format": "text"
         },
-        "unique_name": "variable_workflow_02RW1XJ5WF6IV7j9HKbGEU2S8wzKwnWvVJr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "Target SSID Number",
-          "type": "datatype.string",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false,
-          "variable_string_format": ""
-        },
-        "unique_name": "variable_workflow_02RW1ZB1A9J4H1M9AwUsb5UylQETQ0GIw1e",
+        "unique_name": "variable_workflow_02MSGUYVPN67B25aW3f4XDLZMayHEs3SLTU",
         "object_type": "variable_workflow"
       }
     ],
@@ -325,33 +343,35 @@ Now comes the fun part!  We can trigger workflow automations from many different
       "atomic": {
         "is_atomic": false
       },
+      "automation_rules": {
+        "type": []
+      },
       "delete_workflow_instance": false,
-      "description": "This moves an SSID from one number to a new number in a Meraki network. \n\nThis is to enable the wifi7 feature of enabling BE on specific number sets.",
-      "display_name": "Wireless SSID Mover",
+      "display_name": "Meraki - Create RF Profile",
       "runtime_user": {
         "target_default": true
       },
       "target": {
         "target_type": "meraki.endpoint",
-        "target_id": "definition_target_02PE0EJ2BUTNS6dK207u9oI4wlTtnIfK18s",
+        "target_id": "definition_target_02PWNI7ZDU1CE2k1kL9h5pD7Mq6LZMN0Tbe",
         "execute_on_workflow_target": true
       }
     },
     "object_type": "definition_workflow",
     "actions": [
       {
-        "unique_name": "definition_activity_02RW1WW6LFO675BcEhlUE7C192wclJ5aieB",
+        "unique_name": "definition_activity_02SYAZ8PDQK5W639URel5mnAcpwGM4LqsEm",
         "name": "Meraki - Get Network By Name or ID",
         "title": "Meraki - Get Network By Name or ID",
         "type": "workflow.sub_workflow",
         "base_type": "subworkflow",
         "properties": {
           "continue_on_failure": false,
-          "description": "Utility workflow to retrieve network information using either Network Name or ID with flexible search criteria including configuration template binding filters. Automatically detects input format and applies appropriate search logic.\n\n**Key Features:**\n- Search by Network Name (exact match, case-sensitive)\n- Search by Network ID (format: N_XXXXXXXXXXXXXXXXX)\n- Filter by configuration template binding status\n- Comprehensive error handling\n- Rich network details output",
+          "description": "Utility workflow to retrieve network information using either Network Name or ID with flexible search criteria including configuration template binding filters. Automatically detects input format and applies appropriate search logic.\n\n**Key Features:**\n- Search by Network Name (exact match, case-sensitive)\n- Search by Network ID (format: N_XXXXXXXXXXXXXXXXX)\n- Filter by configuration template binding status\n- Rich network details output",
           "display_name": "Meraki - Get Network By Name or ID",
           "input": {
-            "variable_workflow_02LCRACABYWD40LVa27k00YndGuostARjdp": "$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.local.variable_workflow_02STCIXPIM7DK5O9t9WqvNZoq0FV58sPFWr$",
-            "variable_workflow_02LCRAQ5WICDM3PgxFwKyi19yaeu1bTpVUx": "$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.input.variable_workflow_02RW1XJ5WF6IV7j9HKbGEU2S8wzKwnWvVJr$",
+            "variable_workflow_02LCRACABYWD40LVa27k00YndGuostARjdp": "$workflow.definition_workflow_02MSGUYUJMKKG2BJUI2JYQ4EBifLWskHnN2.input.variable_workflow_02MSGUYVPFZ2J4oWU4Edqs8qSG3TIidS4EA$",
+            "variable_workflow_02LCRAQ5WICDM3PgxFwKyi19yaeu1bTpVUx": "$workflow.definition_workflow_02MSGUYUJMKKG2BJUI2JYQ4EBifLWskHnN2.input.variable_workflow_02MSGUYVPN67B25aW3f4XDLZMayHEs3SLTU$",
             "variable_workflow_02LEUF5N782ES5q1O7K4p1AoMBPrkkcxi1E": false,
             "variable_workflow_02Q7QAYO3GMXK1F8eC0UiZ7xRXnHB5k71O7": ""
           },
@@ -369,19 +389,18 @@ Now comes the fun part!  We can trigger workflow automations from many different
         "object_type": "definition_activity"
       },
       {
-        "unique_name": "definition_activity_02SQV80L0AF1O660sjJlLx6rMg9DKc3HzcU",
-        "name": "Meraki - Get Network Wireless SSIDv2",
-        "title": "Meraki - Get Network Wireless SSIDv2",
+        "unique_name": "definition_activity_02STFQZKJFZCV4tW53I5DjUVCtuBCTU6JDP",
+        "name": "Meraki - Get Network Wireless RF Profiles",
+        "title": "Meraki - Get Network Wireless RF Profiles",
         "type": "workflow.atomic_workflow",
         "base_type": "subworkflow",
         "properties": {
           "continue_on_failure": false,
-          "description": "Return a single MR SSID",
-          "display_name": "Meraki - Get Network Wireless SSIDv2",
+          "description": "**Cisco Meraki - Wireless - Get Network Wireless RF Profiles**\n\nRetrieve a list of RF (Radio Frequency) profiles configured within a specific network\n\n**Target:** A Meraki Endpoint using HTTPS \"api.meraki.com\" port 443 and no path.\n\n**Account Key:** Meraki User API Key. API Key can be generated from Meraki Dashboard -> User Profile -> API Access.\n\nMore information about this API: https://developer.cisco.com/meraki/api-v1/get-network-wireless-rf-profiles/",
+          "display_name": "Meraki - Get Network Wireless RF Profiles",
           "input": {
-            "variable_workflow_02SQUY3NJNKJR3GaaIs7zXIu1wD9sPpkHET": "$activity.definition_activity_02RW1WW6LFO675BcEhlUE7C192wclJ5aieB.output.variable_workflow_02LCRLPN6EZY51pb3GRpQG7QdKWS452YyuL$",
-            "variable_workflow_02SQUY3NJP1BF1hWl45jmE1r53vZbocXuL2": "$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.input.variable_workflow_02RW1YUN3L8GO5Ig15vOrBoWcZHU1FWjbzU$",
-            "variable_workflow_02SQUY3NJP7I235HK6v8M4XswEHsAlTaPKO": false
+            "variable_workflow_02LYIYA7ZSNZS4PQsPFGAyqYqvqxUl92rdL": "$activity.definition_activity_02SYAZ8PDQK5W639URel5mnAcpwGM4LqsEm.output.variable_workflow_02LCRLPN6EZY51pb3GRpQG7QdKWS452YyuL$",
+            "variable_workflow_02LYSJ7ZFW70J5S6jm7sWh2aJfzDtG7RdGD": ""
           },
           "runtime_user": {
             "target_default": true
@@ -391,340 +410,127 @@ Now comes the fun part!  We can trigger workflow automations from many different
             "target_type": "meraki.endpoint",
             "use_workflow_target": true
           },
-          "workflow_id": "definition_workflow_02SQUY3MZNCOL7cpGPXsAt2wpyAuGLKbr1s",
-          "workflow_name": "Meraki - Get Network Wireless SSIDv2"
+          "workflow_id": "definition_workflow_02LYIYA7ZSHTK5KTFu2OI2MEwvVE87Ppx5e",
+          "workflow_name": "Meraki - Get Network Wireless RF Profiles"
         },
         "object_type": "definition_activity"
       },
       {
-        "unique_name": "definition_activity_02RXYKTSVB3DL2pTcvBxdHewMSwiPs5Q2sP",
-        "name": "Replace String",
-        "title": "Replace String",
-        "type": "core.replacestring",
-        "base_type": "activity",
+        "unique_name": "definition_activity_02MSIBT7C9SUV1Fh2Xo727YtWiMt8VAw5pk",
+        "name": "Create Network Wireless RF Profile",
+        "title": "Create Network Wireless RF Profile",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
         "properties": {
-          "action_timeout": 180,
           "continue_on_failure": false,
-          "description": "Replace String to ensure the data we GET can be PUT into a new network.",
-          "display_name": "Replace String",
-          "input_string": "$activity.definition_activity_02SQV80L0AF1O660sjJlLx6rMg9DKc3HzcU.output.variable_workflow_02SQUY3NJMI2E2C7HgJ07f811O9hYCqf8f7$",
-          "replace_list": [
-            {
-              "replaced_string": "null",
-              "replacement_string": "false"
-            },
-            {
-              "replaced_string": "ssidAdminAccessible",
-              "replacement_string": "enabled"
-            },
-            {
-              "replaced_string": "\"name\":\"",
-              "replacement_string": "\"name\":\"New -"
-            },
-            {
-              "replaced_string": "number\":$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.input.variable_workflow_02RW1YUN3L8GO5Ig15vOrBoWcZHU1FWjbzU$",
-              "replacement_string": "number\":$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.input.variable_workflow_02RW1ZB1A9J4H1M9AwUsb5UylQETQ0GIw1e$"
-            },
-            {
-              "replaced_string": "\"openRoamingCertificateId\":false",
-              "replacement_string": "\"openRoamingCertificateId\":NULL"
-            }
-          ],
-          "skip_execution": false
-        },
-        "object_type": "definition_activity"
-      },
-      {
-        "unique_name": "definition_activity_02RXWL3A91I4Y5MDM9uXX9z54f4uWEUolaY",
-        "name": "Generic Meraki API Request",
-        "title": "Bulk Update Network Wireless SSID",
-        "type": "meraki.api_request",
-        "base_type": "activity",
-        "properties": {
-          "action_timeout": 180,
-          "api_body": "$activity.definition_activity_02RXYKTSVB3DL2pTcvBxdHewMSwiPs5Q2sP.output.result_string$",
-          "api_method": "PUT",
-          "api_url": "/api/v1/networks/$activity.definition_activity_02RW1WW6LFO675BcEhlUE7C192wclJ5aieB.output.variable_workflow_02LCRLPN6EZY51pb3GRpQG7QdKWS452YyuL$/wireless/ssids/$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.input.variable_workflow_02RW1ZB1A9J4H1M9AwUsb5UylQETQ0GIw1e$",
-          "continue_on_failure": false,
-          "description": "Generic Meraki API Request",
-          "display_name": "Bulk Update Network Wireless SSID",
+          "display_name": "Create Network Wireless RF Profile",
+          "input": {
+            "variable_workflow_02LXP1U04P8JC6qyDyJGYQMvmJifZz97ndJ": "$activity.definition_activity_02SYAZ8PDQK5W639URel5mnAcpwGM4LqsEm.output.variable_workflow_02LCRLPN6EZY51pb3GRpQG7QdKWS452YyuL$",
+            "variable_workflow_02LXP1U04PA2W4PwCNBZwn878C5waREhRIk": true,
+            "variable_workflow_02LXP1U04PBMG1bReDf14a3Ykp3sBOiOEMP": "{}",
+            "variable_workflow_02LXP1U04PD605hShXJ8cLMKkj83PjXTxHC": "false",
+            "variable_workflow_02LXP1U04PDXS1bvgvoOOTThiDC7b0fXQnD": "{\n  \"maxPower\": 30,\n  \"minPower\": 8,\n  \"minBitrate\": 12,\n  \"validAutoChannels\": [\n    1,\n    5,\n    9,\n    13,\n    17,\n    21,\n    25,\n    29,\n    33,\n    37,\n    41,\n    45,\n    49,\n    53,\n    57,\n    61,\n    65,\n    69,\n    73,\n    77,\n    81,\n    85,\n    89,\n    93,\n    97,\n    101,\n    105,\n    109,\n    113,\n    117,\n    121,\n    125,\n    129,\n    133,\n    137,\n    141,\n    145,\n    149,\n    153,\n    157,\n    161,\n    165,\n    169,\n    173,\n    177,\n    181,\n    185,\n    189,\n    193,\n    197,\n    201,\n    205,\n    209,\n    213,\n    217,\n    221,\n    225,\n    229,\n    233\n  ],\n  \"channelWidth\": \"$workflow.definition_workflow_02MSGUYUJMKKG2BJUI2JYQ4EBifLWskHnN2.input.variable_workflow_02STG2XH3XB4V7VEbZacl1CiiW2K1higoCt$\",\n  \"afcEnabled\": true,\n  \"channelPuncturing\": {\n    \"enabled\": true\n  }\n}",
+            "variable_workflow_02LXP1U04PFHC08n7cI1COhRjHZJlU7ofcg": "ap",
+            "variable_workflow_02LXP1U04PH0W4QVttaNe6lClb9OLkHiaOT": "{\n  \"bandOperationMode\": \"multi\",\n  \"bands\": {\n    \"enabled\": [\n      \"2.4\",\n      \"5\",\n      \"6\"\n    ]\n  }\n}",
+            "variable_workflow_02LXP1U04PHSO5Q5u7UuSWH7zJGZXuOrXWL": "{\n  \"maxPower\": 30,\n  \"minPower\": 5,\n  \"minBitrate\": 11,\n  \"validAutoChannels\": [\n    1,\n    6,\n    11\n  ],\n  \"axEnabled\": true\n}",
+            "variable_workflow_02LXP1U04PK402VU8Ynk9d8A3NP5roNr5mB": "{\n  \"maxPower\": 30,\n  \"minPower\": 8,\n  \"minBitrate\": 12,\n  \"validAutoChannels\": [\n    36,\n    40,\n    44,\n    48,\n    52,\n    56,\n    60,\n    64,\n    100,\n    104,\n    108,\n    112,\n    116,\n    120,\n    124,\n    128,\n    132,\n    136,\n    140,\n    144,\n    149,\n    153,\n    157,\n    161,\n    165\n  ],\n  \"channelWidth\": \"$workflow.definition_workflow_02MSGUYUJMKKG2BJUI2JYQ4EBifLWskHnN2.input.variable_workflow_02STG1W31X6QK6qNTTJLwGfSw69t7Ajwt1r$\",\n  \"channelPuncturing\": {\n    \"enabled\": false\n  }\n}",
+            "variable_workflow_02LXP1U04PKVS2j6kKYUoewUxuF1uwGagqO": "{\"enabled\": true}",
+            "variable_workflow_02LXP1U04PMFC5gnuqTnjM7MjrT6ZdOSKJ6": "{}",
+            "variable_workflow_02LXP1U04PN741TGE6H36Cv1wcsWwShikTO": "$workflow.definition_workflow_02MSGUYUJMKKG2BJUI2JYQ4EBifLWskHnN2.input.variable_workflow_02STFZLZQHP617iLOMJ1qB7tC13uCqNKRtK$",
+            "variable_workflow_02LXP1U04POQO6XIJUTZUsLKtEnGtpdXmRa": "band"
+          },
           "runtime_user": {
             "target_default": true
           },
           "skip_execution": false,
           "target": {
+            "target_type": "meraki.endpoint",
             "use_workflow_target": true
-          }
-        },
-        "object_type": "definition_activity"
-      },
-      {
-        "unique_name": "definition_activity_02RXYXVMPRMPU1EPARwNTpJ4Micls5LWQUK",
-        "name": "Create Prompt",
-        "title": "Ready to swap?",
-        "type": "task.prompt_request",
-        "base_type": "activity",
-        "properties": {
-          "assignee_roles": [
-            "admin",
-            "user"
-          ],
-          "assignees": [
-            "$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.output.started_by$"
-          ],
-          "continue_on_failure": false,
-          "description": "Create Prompt Request",
-          "display_name": "Ready to swap?",
-          "expiration_date": {
-            "is_relative_time": true,
-            "relative_time": {
-              "duration": 2,
-              "time_units": "mins"
-            }
           },
-          "form_elements": [
-            {
-              "allow_multiselect": false,
-              "form_element": "checkbox",
-              "form_label": "Are you sure you want to move this SSID?  Users will be removed",
-              "form_option_label_key": ""
-            }
-          ],
-          "prompt_body": "Please confirm  before proceeding.",
-          "prompt_title": "SSID Mover - User Input",
-          "skip_execution": false,
-          "task_owner": "$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.output.started_by$",
-          "task_requestor": "$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.output.started_by$",
-          "wait_for_prompt_response": true
+          "workflow_id": "definition_workflow_02LXP1U04P34W5aT7szGiPDmZTMs3uLAuIs",
+          "workflow_name": "Meraki - Create Network Wireless RF Profile"
         },
         "object_type": "definition_activity"
       },
       {
-        "unique_name": "definition_activity_02RXZ12LNE6Z43DmJk3daf7k92eXUIZu1f3",
-        "name": "Condition Block",
-        "title": "Condition Block",
-        "type": "logic.if_else",
+        "unique_name": "definition_activity_02MT3JJL0DEUP2wZTmYEuGJ6meyoQQsF5UX",
+        "name": "JSONPath Query",
+        "title": "JSONPath Query - RF Profile ID",
+        "type": "corejava.jsonpathquery",
         "base_type": "activity",
         "properties": {
+          "action_timeout": 180,
           "continue_on_failure": false,
-          "description": "If-Else condition block",
-          "display_name": "Condition Block",
+          "display_name": "JSONPath Query - RF Profile ID",
+          "input_json": "$activity.definition_activity_02MSIBT7C9SUV1Fh2Xo727YtWiMt8VAw5pk.output.variable_workflow_02LXP1U04QGIO51w6PKWSy0FyuJAiPdRdJL$",
+          "jsonpath_queries": [
+            {
+              "jsonpath_query": "$.[?(@.name=='$workflow.definition_workflow_02MSGUYUJMKKG2BJUI2JYQ4EBifLWskHnN2.input.variable_workflow_02STFZLZQHP617iLOMJ1qB7tC13uCqNKRtK$')].id",
+              "jsonpath_query_name": "rfProfileId",
+              "jsonpath_query_type": "string",
+              "set_default_value": false,
+              "zdate_type_format": "yyyy-MM-dd'T'HH:mm:ssZ"
+            }
+          ],
           "skip_execution": false
         },
-        "object_type": "definition_activity",
-        "blocks": [
-          {
-            "unique_name": "definition_activity_02RXZ12NB3ABY0BzMptehRE62XlJzck3Kn4",
-            "name": "Condition Branch",
-            "title": "If Yes!",
-            "type": "logic.condition_block",
-            "base_type": "activity",
-            "properties": {
-              "condition": {
-                "left_operand": "$activity.definition_activity_02RXYXVMPRMPU1EPARwNTpJ4Micls5LWQUK.output.prompt_response.Are you sure you want to move this SSID?  Users will be removed$",
-                "operator": "eq",
-                "right_operand": true
-              },
-              "continue_on_failure": false,
-              "display_name": "If Yes!",
-              "skip_execution": false
-            },
-            "object_type": "definition_activity",
-            "actions": [
-              {
-                "unique_name": "definition_activity_02RXZ3KWNPPUN0NZcC6qjOCbxV3BqsZkAyY",
-                "name": "Disable and Rename SSID",
-                "title": "Disable and Rename SSID",
-                "type": "workflow.atomic_workflow",
-                "base_type": "subworkflow",
-                "properties": {
-                  "continue_on_failure": false,
-                  "description": "Update the attributes of an MR SSID",
-                  "display_name": "Disable and Rename SSID",
-                  "input": {
-                    "variable_workflow_02LLSA7EOAT0O3JsAWvXnZOfQ7oegTq3Dqt": "$activity.definition_activity_02RW1WW6LFO675BcEhlUE7C192wclJ5aieB.output.variable_workflow_02LCRLPN6EZY51pb3GRpQG7QdKWS452YyuL$",
-                    "variable_workflow_02LLSA7EOAVC03lI3PHWwWLNlMOyIMUOUkV": "$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.input.variable_workflow_02RW1YUN3L8GO5Ig15vOrBoWcZHU1FWjbzU$",
-                    "variable_workflow_02LLSA7EOAWVK6IQBul0G7SIKq9OdeYGgjQ": "{}",
-                    "variable_workflow_02LLSA7EOAYF46a34jlT8W4usQhSi3LRhn0": "",
-                    "variable_workflow_02LLSA7EOB2A05HRjXgWAAfXVLFni9YMmO8": "",
-                    "variable_workflow_02LLSA7EOB3TK1oGpHyqaKLXOzYcAF4FA1A": "",
-                    "variable_workflow_02LLSA7EOB5D46NOmDKYidugdxqKQSzQd7V": "{}",
-                    "variable_workflow_02LLSA7EOB64W0RzsxMhxbJHoCFw6g62FG2": "[]",
-                    "variable_workflow_02LLSA7EOB8G8224dXPlAlrtiymHdtMkmyD": "",
-                    "variable_workflow_02LLSA7EOB98016aho2yItoWGwMJSCsjZQ8": "",
-                    "variable_workflow_02LLSA7EOBBJC6SROrVi9dpa3daPMAlmKUd": "",
-                    "variable_workflow_02LLSA7EOBDUO0FcQLgXYXauexvXKdHHaxB": "",
-                    "variable_workflow_02LLSA7EOBEMG37hbmFvxsSuqtvk2ivltu0": "[]",
-                    "variable_workflow_02LLSA7EOBG6019A2hKy0n36o5MkufCiJPk": "",
-                    "variable_workflow_02LLSA7EOBK0W3WrO71mZLNvsGVELTvA6Iw": "",
-                    "variable_workflow_02LLSA7EOBKSO7mKcHFOJXrjQpyMIXBM7Co": "",
-                    "variable_workflow_02LLSA7EOBMC83iJvJiD7gKq6K21cvzqQR9": "",
-                    "variable_workflow_02LLSA7EOBRQO6mt8wC53RVEkZlWHfMYkFh": "[]",
-                    "variable_workflow_02LLSA7EOBTA861h5C8mVPLddQyPytKZMqm": "",
-                    "variable_workflow_02LLSA7EOBU207EZAkRCfOld4eKGA370EZK": "{}",
-                    "variable_workflow_02LLSA7EOBVLK5M94CXLhfL4epG2WcRytnm": [],
-                    "variable_workflow_02LLSA7EOBWDC3mFXdv3lAjbBucW5BbX4D1": "",
-                    "variable_workflow_02LLSA7EOBXWW5W3C7sU1KVaOTtgVig1exX": "",
-                    "variable_workflow_02LLSA7EOC1000NvWNzz0XBSMjnwq00MlzN": "{}",
-                    "variable_workflow_02LLSA7EOC3BC0ambpfc4eMlTTFb73kq6a8": "",
-                    "variable_workflow_02LLSA7EOC4UW1CDQq0qExg2WH5aTuR68x5": "",
-                    "variable_workflow_02LLSA7EOC6EG3TLwhWPhpT3MqwwdPUkYsN": "",
-                    "variable_workflow_02LLSA7EOC7Y04tWUVUwm7TOIsrAaFgdSih": "",
-                    "variable_workflow_02LLSA7EOC9HK5ABX2FM96YLhtllWZDs2w6": "{}",
-                    "variable_workflow_02LLSA7EOCB144d6dL38nYdLrGciVYBamfJ": "",
-                    "variable_workflow_02LLSA7EOCCKO07TOCARfB5UQmT1RB4Aut7": "",
-                    "variable_workflow_02LLSA7EOCHZ40R6pheLAhOrEos2wLEKzeQ": "",
-                    "variable_workflow_02LLSA7EOCJIO7Ce0akC0pWWyQu8wqA280a": "",
-                    "variable_workflow_02LLSA7EOCKAG5pHNBVffVzQ3IrXzlVISFv": "",
-                    "variable_workflow_02LLSA7EOCLU043PS2KZuVa2gHTEEvwVXxS": "{}",
-                    "variable_workflow_02LLSA7EOCMLS74g20AqowIchDa86xV8eKk": "Old - $activity.definition_activity_02SQV80L0AF1O660sjJlLx6rMg9DKc3HzcU.output.variable_workflow_02SQUY3NJJG092qZfY2hgsF4glMONMBAzLq$",
-                    "variable_workflow_02LLSA7EOCNDK77rRBpAxEU44pWCy8kYfxh": "false",
-                    "variable_workflow_02LLSA7EOCO5C41YWqj702OhSW5Vilmh7XW": "{}",
-                    "variable_workflow_02LLSA7EOCPOW1MofCcXS9UMudLy7OJDGgU": [],
-                    "variable_workflow_02LLSA7EOCR8G4Xvr7Puq8vbRIKNptvTfh8": "",
-                    "variable_workflow_02LLSA7EOCSS01MkjhZ6w4tJ48HGUup4F0d": "",
-                    "variable_workflow_02LLSA7EOCUBK0F7TaK6GTdNC0ov4i1nap3": "",
-                    "variable_workflow_02LLSA7EODCU87OEHHDU8ybQ0MeAt42W20x": [],
-                    "variable_workflow_02LLSA7EODEDS1vuOfcOYIyWFAa1ifCl3Ky": "",
-                    "variable_workflow_02LLSA7EODFXC5Bg4qYAzxFJCtCxznNrddO": "",
-                    "variable_workflow_02LLSA7EODI8O7dxmSuUUEbdSYzvypAvRgM": "{}",
-                    "variable_workflow_02LLSA7EODJ0G6mvfe1VC0tNUId4ECb4hRS": "",
-                    "variable_workflow_02LLSA7EODJS82plYRuPjHOAiQlddFWtndI": "",
-                    "variable_workflow_02LLSA7EODM3K3wWGERJGkkSk0piU0EgAYs": "",
-                    "variable_workflow_02LLSA7EODNN47fIQFLy4rAmzSDK7NaUUNw": "",
-                    "variable_workflow_02LLSA7EODP6O4BPDnZnMBIA0OKrDGhGY7b": "",
-                    "variable_workflow_02LLSA7EODPYG7kx2tIWni6Z8MwD6ETpGCG": "",
-                    "variable_workflow_02LLSA7EODRI07PCeMcfYjRcaux3v1xC4Lz": "",
-                    "variable_workflow_02LLSA7EODT1K7AjNuJayNnnJhdEdFje8BC": "",
-                    "variable_workflow_02LLSA7EODTTC7jS6OAFCwPiAe2Bqu21LGQ": "{}",
-                    "variable_workflow_02LLSA7EODVCW6acq3RkmNTSoqzBbv1NJKC": "",
-                    "variable_workflow_02LLSA7EODW4O2tbJws7sJVypRaOJosdpMZ": "{}",
-                    "variable_workflow_02LLSA7EODWWG3JuTxmsp4y0xQKKwlbmOG8": "{}",
-                    "variable_workflow_02LLSA7EODXO82cJzucZWhFLcIfJwhkCFWG": "",
-                    "variable_workflow_02LLY7DN7KHPG0UNDEcCBsKSesazYzkJZGJ": "",
-                    "variable_workflow_02LMMSVN0Y25K4v96fIHseh7whARGUKI113": "",
-                    "variable_workflow_02LMO11ZE6BUF6fNwsUk45oh3fHzd4vqKkI": ""
-                  },
-                  "runtime_user": {
-                    "target_default": true
-                  },
-                  "skip_execution": false,
-                  "target": {
-                    "target_type": "meraki.endpoint",
-                    "use_workflow_target": true
-                  },
-                  "workflow_id": "definition_workflow_02LLSA7EOAQPC2RykedUX9y4UVVWi5yXQQy",
-                  "workflow_name": "Meraki - Update Network Wireless SSID"
-                },
-                "object_type": "definition_activity"
-              },
-              {
-                "unique_name": "definition_activity_02RXZ2IKY0Y394gLVz21BuiJPhwk7raGpKv",
-                "name": "Enable and Update SSID",
-                "title": "Enable and Update SSID",
-                "type": "workflow.atomic_workflow",
-                "base_type": "subworkflow",
-                "properties": {
-                  "continue_on_failure": false,
-                  "description": "Update the attributes of an MR SSID",
-                  "display_name": "Enable and Update SSID",
-                  "input": {
-                    "variable_workflow_02LLSA7EOAT0O3JsAWvXnZOfQ7oegTq3Dqt": "$activity.definition_activity_02RW1WW6LFO675BcEhlUE7C192wclJ5aieB.output.variable_workflow_02LCRLPN6EZY51pb3GRpQG7QdKWS452YyuL$",
-                    "variable_workflow_02LLSA7EOAVC03lI3PHWwWLNlMOyIMUOUkV": "$workflow.definition_workflow_02RARHLQNIJKC635yr3Jrwr6dvn4Rh0MuRe.input.variable_workflow_02RW1ZB1A9J4H1M9AwUsb5UylQETQ0GIw1e$",
-                    "variable_workflow_02LLSA7EOAWVK6IQBul0G7SIKq9OdeYGgjQ": "{}",
-                    "variable_workflow_02LLSA7EOAYF46a34jlT8W4usQhSi3LRhn0": "",
-                    "variable_workflow_02LLSA7EOB2A05HRjXgWAAfXVLFni9YMmO8": "",
-                    "variable_workflow_02LLSA7EOB3TK1oGpHyqaKLXOzYcAF4FA1A": "",
-                    "variable_workflow_02LLSA7EOB5D46NOmDKYidugdxqKQSzQd7V": "{}",
-                    "variable_workflow_02LLSA7EOB64W0RzsxMhxbJHoCFw6g62FG2": "[]",
-                    "variable_workflow_02LLSA7EOB8G8224dXPlAlrtiymHdtMkmyD": "",
-                    "variable_workflow_02LLSA7EOB98016aho2yItoWGwMJSCsjZQ8": "",
-                    "variable_workflow_02LLSA7EOBBJC6SROrVi9dpa3daPMAlmKUd": "",
-                    "variable_workflow_02LLSA7EOBDUO0FcQLgXYXauexvXKdHHaxB": "",
-                    "variable_workflow_02LLSA7EOBEMG37hbmFvxsSuqtvk2ivltu0": "[]",
-                    "variable_workflow_02LLSA7EOBG6019A2hKy0n36o5MkufCiJPk": "",
-                    "variable_workflow_02LLSA7EOBK0W3WrO71mZLNvsGVELTvA6Iw": "",
-                    "variable_workflow_02LLSA7EOBKSO7mKcHFOJXrjQpyMIXBM7Co": "",
-                    "variable_workflow_02LLSA7EOBMC83iJvJiD7gKq6K21cvzqQR9": "",
-                    "variable_workflow_02LLSA7EOBRQO6mt8wC53RVEkZlWHfMYkFh": "[]",
-                    "variable_workflow_02LLSA7EOBTA861h5C8mVPLddQyPytKZMqm": "",
-                    "variable_workflow_02LLSA7EOBU207EZAkRCfOld4eKGA370EZK": "{}",
-                    "variable_workflow_02LLSA7EOBVLK5M94CXLhfL4epG2WcRytnm": [],
-                    "variable_workflow_02LLSA7EOBWDC3mFXdv3lAjbBucW5BbX4D1": "",
-                    "variable_workflow_02LLSA7EOBXWW5W3C7sU1KVaOTtgVig1exX": "",
-                    "variable_workflow_02LLSA7EOC1000NvWNzz0XBSMjnwq00MlzN": "{}",
-                    "variable_workflow_02LLSA7EOC3BC0ambpfc4eMlTTFb73kq6a8": "",
-                    "variable_workflow_02LLSA7EOC4UW1CDQq0qExg2WH5aTuR68x5": "",
-                    "variable_workflow_02LLSA7EOC6EG3TLwhWPhpT3MqwwdPUkYsN": "",
-                    "variable_workflow_02LLSA7EOC7Y04tWUVUwm7TOIsrAaFgdSih": "",
-                    "variable_workflow_02LLSA7EOC9HK5ABX2FM96YLhtllWZDs2w6": "{}",
-                    "variable_workflow_02LLSA7EOCB144d6dL38nYdLrGciVYBamfJ": "",
-                    "variable_workflow_02LLSA7EOCCKO07TOCARfB5UQmT1RB4Aut7": "",
-                    "variable_workflow_02LLSA7EOCHZ40R6pheLAhOrEos2wLEKzeQ": "",
-                    "variable_workflow_02LLSA7EOCJIO7Ce0akC0pWWyQu8wqA280a": "",
-                    "variable_workflow_02LLSA7EOCKAG5pHNBVffVzQ3IrXzlVISFv": "",
-                    "variable_workflow_02LLSA7EOCLU043PS2KZuVa2gHTEEvwVXxS": "{}",
-                    "variable_workflow_02LLSA7EOCMLS74g20AqowIchDa86xV8eKk": "$activity.definition_activity_02SQV80L0AF1O660sjJlLx6rMg9DKc3HzcU.output.variable_workflow_02SQUY3NJJG092qZfY2hgsF4glMONMBAzLq$",
-                    "variable_workflow_02LLSA7EOCNDK77rRBpAxEU44pWCy8kYfxh": "true",
-                    "variable_workflow_02LLSA7EOCO5C41YWqj702OhSW5Vilmh7XW": "{}",
-                    "variable_workflow_02LLSA7EOCPOW1MofCcXS9UMudLy7OJDGgU": [],
-                    "variable_workflow_02LLSA7EOCR8G4Xvr7Puq8vbRIKNptvTfh8": "",
-                    "variable_workflow_02LLSA7EOCSS01MkjhZ6w4tJ48HGUup4F0d": "",
-                    "variable_workflow_02LLSA7EOCUBK0F7TaK6GTdNC0ov4i1nap3": "",
-                    "variable_workflow_02LLSA7EODCU87OEHHDU8ybQ0MeAt42W20x": [],
-                    "variable_workflow_02LLSA7EODEDS1vuOfcOYIyWFAa1ifCl3Ky": "",
-                    "variable_workflow_02LLSA7EODFXC5Bg4qYAzxFJCtCxznNrddO": "",
-                    "variable_workflow_02LLSA7EODI8O7dxmSuUUEbdSYzvypAvRgM": "{}",
-                    "variable_workflow_02LLSA7EODJ0G6mvfe1VC0tNUId4ECb4hRS": "",
-                    "variable_workflow_02LLSA7EODJS82plYRuPjHOAiQlddFWtndI": "",
-                    "variable_workflow_02LLSA7EODM3K3wWGERJGkkSk0piU0EgAYs": "",
-                    "variable_workflow_02LLSA7EODNN47fIQFLy4rAmzSDK7NaUUNw": "",
-                    "variable_workflow_02LLSA7EODP6O4BPDnZnMBIA0OKrDGhGY7b": "",
-                    "variable_workflow_02LLSA7EODPYG7kx2tIWni6Z8MwD6ETpGCG": "",
-                    "variable_workflow_02LLSA7EODRI07PCeMcfYjRcaux3v1xC4Lz": "",
-                    "variable_workflow_02LLSA7EODT1K7AjNuJayNnnJhdEdFje8BC": "",
-                    "variable_workflow_02LLSA7EODTTC7jS6OAFCwPiAe2Bqu21LGQ": "{}",
-                    "variable_workflow_02LLSA7EODVCW6acq3RkmNTSoqzBbv1NJKC": "",
-                    "variable_workflow_02LLSA7EODW4O2tbJws7sJVypRaOJosdpMZ": "{}",
-                    "variable_workflow_02LLSA7EODWWG3JuTxmsp4y0xQKKwlbmOG8": "{}",
-                    "variable_workflow_02LLSA7EODXO82cJzucZWhFLcIfJwhkCFWG": "",
-                    "variable_workflow_02LLY7DN7KHPG0UNDEcCBsKSesazYzkJZGJ": "",
-                    "variable_workflow_02LMMSVN0Y25K4v96fIHseh7whARGUKI113": "",
-                    "variable_workflow_02LMO11ZE6BUF6fNwsUk45oh3fHzd4vqKkI": ""
-                  },
-                  "runtime_user": {
-                    "target_default": true
-                  },
-                  "skip_execution": false,
-                  "target": {
-                    "target_type": "meraki.endpoint",
-                    "use_workflow_target": true
-                  },
-                  "workflow_id": "definition_workflow_02LLSA7EOAQPC2RykedUX9y4UVVWi5yXQQy",
-                  "workflow_name": "Meraki - Update Network Wireless SSID"
-                },
-                "object_type": "definition_activity"
-              }
-            ]
-          }
-        ]
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_02MT4QYGWGDGM4Y7uk4rKPJmkcw8D0CThwX",
+        "name": "Update Network Wireless RF Profile",
+        "title": "Update Network Wireless RF Profile",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Update Network Wireless RF Profile",
+          "input": {
+            "variable_workflow_02LYMDAF81L085XVGwQfO1NbeCUvpm1FSSI": "$activity.02STFOWTOWYBP51gf3hNtdBPYW14Ha26ZeB.output.variable_workflow_02LCRLPN6EZY51pb3GRpQG7QdKWS452YyuL$",
+            "variable_workflow_02LYMDAF81MJS2Podxezdl8sXMr81USxHsd": "$activity.definition_activity_02MT3JJL0DEUP2wZTmYEuGJ6meyoQQsF5UX.output.jsonpath_queries.rfProfileId$",
+            "variable_workflow_02LYMDAF81O3C54SpaJoVsFGqyFsucXxTXN": "",
+            "variable_workflow_02LYMDAF81QEO6HCjIKmGPTqtsCeP2CxSrL": "true",
+            "variable_workflow_02LYMDAF81RY84nTVBlcri0WFV6kGcaVA1n": "{}",
+            "variable_workflow_02LYMDAF81SQ03nOyFQgs6CIkPQQqhuwwcH": "{}",
+            "variable_workflow_02LYMDAF81U9K6Y9bU3KCaD0aMY8lcQG24Y": "{}",
+            "variable_workflow_02LYMDAF81VT429Mqw3ju1oUaKRy5RBxEto": "{}",
+            "variable_workflow_02LYMDAF81XCO2fmomf6xZbkmC31vVkifBE": "false",
+            "variable_workflow_02LYMDAF81YW86U2yMynoWTPKDQP28wPcrR": "false",
+            "variable_workflow_02LYMDAF81ZO04KWWEoCQ2f3PlvJAGeYYan": "{}",
+            "variable_workflow_02LYMDAF8217K2KrsOjBpdD2LSo9kdnhZeD": "{}",
+            "variable_workflow_02LYMDAF822R44aptFxbKioXjM2oBa0Vdud": "",
+            "variable_workflow_02LYMDAF824AO0iBJ1wuENycXYiXJKWqXay": "false",
+            "variable_workflow_02LYMDAF825U837HukbfDd69L9HyvX9ds0d": "",
+            "variable_workflow_02LYMDAF826M026ubeIFplpu8zPDXHdEaM0": "{}"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": true,
+          "target": {
+            "target_type": "meraki.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_02LYMDAF81BQW2i1rZIloMZHZjAJJ4h3n2G",
+          "workflow_name": "Meraki - Update Network Wireless RF Profile"
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
-      "category_02LJAJ25KZEU65PJVRVM48extE20B3tMIiX"
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
     ]
   },
   "targets": {
-    "definition_target_02PE0EJ2BUTNS6dK207u9oI4wlTtnIfK18s": {
-      "unique_name": "definition_target_02PE0EJ2BUTNS6dK207u9oI4wlTtnIfK18s",
-      "name": "Sorensen Villa",
-      "title": "Sorensen Villa",
+    "definition_target_02PWNI7ZDU1CE2k1kL9h5pD7Mq6LZMN0Tbe": {
+      "unique_name": "definition_target_02PWNI7ZDU1CE2k1kL9h5pD7Mq6LZMN0Tbe",
+      "name": "Meraki Launchpad",
+      "title": "Meraki Launchpad",
       "type": "meraki.endpoint",
       "base_type": "target",
       "object_type": "definition_target",
       "properties": {
-        "default_runtime_user_id": "definition_runtime_user_02PE0C9DMJODS00pDJakISPAQIQJJrBTnjO",
-        "display_name": "Sorensen Villa",
+        "display_name": "Meraki Launchpad",
         "host": "api.meraki.com",
         "ignore_proxy": false,
         "is_https_proxy": false,
@@ -733,28 +539,16 @@ Now comes the fun part!  We can trigger workflow automations from many different
       }
     }
   },
-  "runtime_users": {
-    "definition_runtime_user_02PE0C9DMJODS00pDJakISPAQIQJJrBTnjO": {
-      "unique_name": "definition_runtime_user_02PE0C9DMJODS00pDJakISPAQIQJJrBTnjO",
-      "name": "Clint API Key",
-      "title": "Clint API Key",
-      "type": "runtime_user.meraki_credentials",
-      "base_type": "runtime_user",
-      "object_type": "definition_runtime_user",
-      "properties": {
-        "api_key": "*****",
-        "display_name": "Clint API Key"
-      }
-    }
-  },
   "atomic_workflows": [
-    "definition_workflow_02SQUY3MZNCOL7cpGPXsAt2wpyAuGLKbr1s",
-    "definition_workflow_02LLSA7EOAQPC2RykedUX9y4UVVWi5yXQQy"
+    "definition_workflow_02LYIYA7ZSHTK5KTFu2OI2MEwvVE87Ppx5e",
+    "definition_workflow_02LXP1U04P34W5aT7szGiPDmZTMs3uLAuIs",
+    "definition_workflow_02LYMDAF81BQW2i1rZIloMZHZjAJJ4h3n2G"
   ],
   "dependent_workflows": [
     "definition_workflow_02LCR4UKH38PM6zDR4Bx2b2J165gCF1mhvh",
-    "definition_workflow_02SQUY3MZNCOL7cpGPXsAt2wpyAuGLKbr1s",
-    "definition_workflow_02LLSA7EOAQPC2RykedUX9y4UVVWi5yXQQy"
+    "definition_workflow_02LYIYA7ZSHTK5KTFu2OI2MEwvVE87Ppx5e",
+    "definition_workflow_02LXP1U04P34W5aT7szGiPDmZTMs3uLAuIs",
+    "definition_workflow_02LYMDAF81BQW2i1rZIloMZHZjAJJ4h3n2G"
   ]
 }
 ```
@@ -763,7 +557,7 @@ Now comes the fun part!  We can trigger workflow automations from many different
  ## Let's import the workflow into your Pod.
 
 > [!IMPORTANT]
-> ⭐⭐ Change your org to use the **$${\color{green}WKS-1314}$$ $${\color{green}Pod}$$** Organization ⭐⭐
+> ⭐⭐ Change your org to use the **$${\color{green}DEVWKS-1314}$$ $${\color{green}Pod}$$** Organization ⭐⭐
 1.  Under the Automation menu, select Workspace to get back to your workflows.
 
 2.  Click on the Actions button and select Import Workflow.
@@ -774,6 +568,26 @@ Now comes the fun part!  We can trigger workflow automations from many different
 
 [!github import screenshot](/media/28.png)
 
-4.  
- 
+4.  Once the import is successful, we'll need to edit the workflow and connect it to our environment.  Select Edit Workflow.
+
+[! edit workflow screenshot](/media/29.png)
+
+5.  In the workflow properties (right column), change the target to your environment.
+
+[! target screenshot](/media/30.png)
+
+6.  Now you can Validate and Run the workflow.
+
+7.  You'll need to input the following values:
+    +  Organization name:  DEVWKS-1314 Pod X [X is your pod number]
+    +  Network name:  Copenhagen
+    +  RF Profile name:  WIFI 7 RF Profile
+    +  5GHz channel width:  40
+    +  6GHz channel width:  auto
+
+8.  Run your workflow and validate that the profile is created.
+
+9.  Excelent work!  Now you can go forth and expand your new found abilities!
+
+10. Here is a great resource after Cisco Live to learn even more:  https://cs.co/WorkflowsSelfLearning  
  
