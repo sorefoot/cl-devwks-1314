@@ -20,7 +20,9 @@ The current username will be devwksuser+*[Pod #]*@proton.me
 The current password should be C1sco12345  
 If you are prompted for 2FA, please raise your hand.
 > [!NOTE]
->  ⭐⭐ Your user should have access to two organizations.  Please ensure you are using the **DEVWKS-1314 Pod*X*** organization and **NOT the zzCLEMEA Bighorn** Organization.  If you don't see the **DEVWKS-1314 Pod*X*** org, please raise your hand.
+>  ⭐⭐ Your user should have access to two organizations.
+>  Please ensure you are using the **DEVWKS-1314 Pod*X*** organization and **NOT the zzCLEMEA Bighorn** organization.
+>  If you don't see the **DEVWKS-1314 Pod*X*** org, please raise your hand.
 
 ### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:  
