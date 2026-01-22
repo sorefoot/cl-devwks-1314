@@ -266,30 +266,14 @@ Now comes the fun part!  We can trigger workflow automations from many different
         "properties": {
           "value": "",
           "scope": "input",
-          "name": "RF Profile Name",
+          "name": "Network Name",
           "type": "datatype.string",
           "is_required": true,
           "display_on_wizard": false,
           "is_invisible": false,
-          "variable_string_format": ""
+          "variable_string_format": "text"
         },
-        "unique_name": "variable_workflow_02STFZLZQHP617iLOMJ1qB7tC13uCqNKRtK",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "5gHz Channel Width",
-          "type": "datatype.string",
-          "description": "\"20\", \"40\", \"80\", \"160\", \"auto\"",
-          "is_required": false,
-          "display_on_wizard": false,
-          "is_invisible": false,
-          "variable_string_format": ""
-        },
-        "unique_name": "variable_workflow_02STG1W31X6QK6qNTTJLwGfSw69t7Ajwt1r",
+        "unique_name": "variable_workflow_02MSGUYVPN67B25aW3f4XDLZMayHEs3SLTU",
         "object_type": "variable_workflow"
       },
       {
@@ -328,14 +312,30 @@ Now comes the fun part!  We can trigger workflow automations from many different
         "properties": {
           "value": "",
           "scope": "input",
-          "name": "Network Name",
+          "name": "RF Profile Name",
           "type": "datatype.string",
           "is_required": true,
           "display_on_wizard": false,
           "is_invisible": false,
-          "variable_string_format": "text"
+          "variable_string_format": ""
         },
-        "unique_name": "variable_workflow_02MSGUYVPN67B25aW3f4XDLZMayHEs3SLTU",
+        "unique_name": "variable_workflow_02STFZLZQHP617iLOMJ1qB7tC13uCqNKRtK",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "5gHz Channel Width",
+          "type": "datatype.string",
+          "description": "\"20\", \"40\", \"80\", \"160\", \"auto\"",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false,
+          "variable_string_format": ""
+        },
+        "unique_name": "variable_workflow_02STG1W31X6QK6qNTTJLwGfSw69t7Ajwt1r",
         "object_type": "variable_workflow"
       }
     ],
@@ -349,11 +349,13 @@ Now comes the fun part!  We can trigger workflow automations from many different
       "delete_workflow_instance": false,
       "display_name": "Meraki - Create RF Profile",
       "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
         "target_default": true
       },
       "target": {
         "target_type": "meraki.endpoint",
-        "target_id": "definition_target_02PWNI7ZDU1CE2k1kL9h5pD7Mq6LZMN0Tbe",
+        "target_id": "definition_target_02SRTK7QOKI315CVE4rU6G6ZJcTAuL0DbbO",
         "execute_on_workflow_target": true
       }
     },
@@ -486,7 +488,7 @@ Now comes the fun part!  We can trigger workflow automations from many different
           "continue_on_failure": false,
           "display_name": "Update Network Wireless RF Profile",
           "input": {
-            "variable_workflow_02LYMDAF81L085XVGwQfO1NbeCUvpm1FSSI": "$activity.02STFOWTOWYBP51gf3hNtdBPYW14Ha26ZeB.output.variable_workflow_02LCRLPN6EZY51pb3GRpQG7QdKWS452YyuL$",
+            "variable_workflow_02LYMDAF81L085XVGwQfO1NbeCUvpm1FSSI": "$activity.definition_activity_02SYAZ8PDQK5W639URel5mnAcpwGM4LqsEm.output.variable_workflow_02LCRLPN6EZY51pb3GRpQG7QdKWS452YyuL$",
             "variable_workflow_02LYMDAF81MJS2Podxezdl8sXMr81USxHsd": "$activity.definition_activity_02MT3JJL0DEUP2wZTmYEuGJ6meyoQQsF5UX.output.jsonpath_queries.rfProfileId$",
             "variable_workflow_02LYMDAF81O3C54SpaJoVsFGqyFsucXxTXN": "",
             "variable_workflow_02LYMDAF81QEO6HCjIKmGPTqtsCeP2CxSrL": "true",
@@ -522,20 +524,36 @@ Now comes the fun part!  We can trigger workflow automations from many different
     ]
   },
   "targets": {
-    "definition_target_02PWNI7ZDU1CE2k1kL9h5pD7Mq6LZMN0Tbe": {
-      "unique_name": "definition_target_02PWNI7ZDU1CE2k1kL9h5pD7Mq6LZMN0Tbe",
-      "name": "Meraki Launchpad",
-      "title": "Meraki Launchpad",
+    "definition_target_02SRTK7QOKI315CVE4rU6G6ZJcTAuL0DbbO": {
+      "unique_name": "definition_target_02SRTK7QOKI315CVE4rU6G6ZJcTAuL0DbbO",
+      "name": "Meraki-DEVWKS1314-1",
+      "title": "Meraki-DEVWKS1314-1",
       "type": "meraki.endpoint",
       "base_type": "target",
       "object_type": "definition_target",
       "properties": {
-        "display_name": "Meraki Launchpad",
+        "default_runtime_user_id": "definition_runtime_user_02SRTJR4FIS4W4GXKvMWaeqjnLX1mwOQlBM",
+        "display_name": "Meraki-DEVWKS1314-1",
         "host": "api.meraki.com",
         "ignore_proxy": false,
         "is_https_proxy": false,
+        "is_integration_target": false,
         "port": 443,
         "protocol": "https"
+      }
+    }
+  },
+  "runtime_users": {
+    "definition_runtime_user_02SRTJR4FIS4W4GXKvMWaeqjnLX1mwOQlBM": {
+      "unique_name": "definition_runtime_user_02SRTJR4FIS4W4GXKvMWaeqjnLX1mwOQlBM",
+      "name": "Meraki API",
+      "title": "Meraki API",
+      "type": "runtime_user.meraki_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "api_key": "*****",
+        "display_name": "Meraki API"
       }
     }
   },
