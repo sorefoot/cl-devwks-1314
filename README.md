@@ -250,7 +250,7 @@ Now comes the fun part!  We can trigger workflow automations from many different
 
 3. Either select all from the raw JSON or click the copy button on the top right.
 
-[!github screenshot](/media/26.png)
+![github screenshot](/media/26.png)
 
 <details> 
    <summary>JSON is also here:  </summary>
@@ -583,19 +583,19 @@ Now comes the fun part!  We can trigger workflow automations from many different
 
 2.  Click on the Actions button and select Import Workflow.
  
- [!import screenshot](/media/27.png)
+ ![import screenshot](/media/27.png)
 
 3.  Paste the json into the window and select Import.
 
-[!github import screenshot](/media/28.png)
+![github import screenshot](/media/28.png)
 
 4.  Once the import is successful, we'll need to edit the workflow and connect it to our environment.  Select Edit Workflow.
 
-[! edit workflow screenshot](/media/29.png)
+![edit workflow screenshot](/media/29.png)
 
 5.  In the workflow properties (right column), change the target to your environment.
 
-[! target screenshot](/media/30.png)
+![target screenshot](/media/30.png)
 
 6.  Now you can Validate and Run the workflow.
 
