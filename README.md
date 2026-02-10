@@ -159,7 +159,7 @@ Now we're ready to get started and build a workflow from a blank canvas!
 
 ![name screenshot](/media/14.png)  
 
-5. You now have a blank workflow canvas ready for you to begin creating.  On the right side Workflow Properties section, click on the General drop down.  Add a Category of "Cisco Live Lab".  
+5. You now have a blank workflow canvas ready for you to begin creating.  On the right side Workflow Properties section, click on the General drop down.  Add or Select the Category of "Cisco Live Lab".  
 
 ![workflow category screenshot](/media/15.png)  
 
