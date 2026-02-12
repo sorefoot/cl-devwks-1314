@@ -18,8 +18,9 @@ ___
 Cisco Workflows is hosted in the Meraki Dashboard.  Open a browswer and navigate to https://dashboard.meraki.com.    
 You'll use the credentials assigned to you by your Lab Admin.  
 
-The current username will be devwksuser+*[Pod #]*@proton.me  
-The current password should be C1sco12345  
+The current username will be $${\color{green}devwksuser+*[Pod #]*@proton.me}$$ (Where Pod # is your number)  
+The current password should be $${\color{green}C1sco12345}$$  
+
 If you are prompted for a code, I'll give it to you as the come in.  
 
 ![patience](/media/patience.jpeg)
