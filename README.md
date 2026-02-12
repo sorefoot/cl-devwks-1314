@@ -19,7 +19,10 @@ Cisco Workflows is hosted in the Meraki Dashboard.  Open a browswer and navigate
 You'll use the credentials assigned to you by your Lab Admin.  
 The current username will be devwksuser+*[Pod #]*@proton.me  
 The current password should be C1sco12345  
-If you are prompted for 2FA, please raise your hand.
+If you are prompted for a code, I'll give it to you as the come in.  
+![patience](/media/patience.jpeg)
+The email may take a minute to arrive.  Please enjoy a treat on your table.
+
 > [!NOTE]
 >  ⭐⭐ Your user should have access to two organizations.
 >  Please ensure you are using the **DEVWKS-1314 Pod*X*** organization and **NOT the zzCLEMEA Bighorn** organization.
@@ -227,9 +230,9 @@ Now comes the fun part!  We can trigger workflow automations from many different
 
 + Open up the AI Assistant
 
-+ Type the command:  via automation, pod [X] ping [Y] (where *X* is your pod number and *Y* is your favorite football player)  If this wasn't a shared resource you could use the command ping mbappe via automation and it would work but we should have a lot of these workflows similarly named.  
++ Ask the assistant to run the workflow by typing something like:  Help me see if its alive via automation, run [X] (where *X* is the name of your workflow)  You may have to adjust the prompt to find your specific workflow automation. 
 
-+ Confirm that it selected your workflow correctly.  
++ Confirm that it selected your workflow correctly as well as any other questions it may ask.  
 
 + Watch the AI assistant run your workflow.  Upon successful completion, the workflow results variable will be displayed and will be available for evaluation and manipulation.  
 
