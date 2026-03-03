@@ -1,4 +1,4 @@
-# cl-devwks-1314
+# cl-CO-TECHDAY 
 ### Cisco Live DevNet Workshop 1314
 # Automating with Cisco Workflows Introduction
 
@@ -19,7 +19,7 @@ Cisco Workflows is hosted in the Meraki Dashboard.  Open a browswer and navigate
 You'll use the credentials assigned to you by your Lab Admin.  
 
 The current username will be $${\color{green}devwksuser+}$$*[Pod #]*$${\color{green}@proton.me}$$ (Where Pod # is your number)  
-The current password should be $${\color{green}CHANGEME123}$$  
+The current password should be $${\color{green}C1sco12345}$$  
 
 If you are prompted for a code, I'll give it to you as the come in.  
 
@@ -29,8 +29,8 @@ The email may take a minute to arrive.  Please enjoy a treat on your table.
 
 > [!NOTE]
 >  ⭐⭐ Your user should have access to two organizations.
->  Please ensure you are using the **DEVWKS-1314 Pod*X*** organization and **NOT the zzCLEMEA Bighorn** organization.
->  If you don't see the **DEVWKS-1314 Pod*X*** org, please raise your hand.
+>  Please ensure you are using the **CO-TECHDAY Pod*X*** organization and **NOT the zzCLEMEA Bighorn** organization.
+>  If you don't see the **CO-TECHDAY Pod*X*** org, please raise your hand.
 
 ### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:  
@@ -62,7 +62,7 @@ ready for use.
 
 #### First we'll create a connection to the Meraki environment via API.
 > [!IMPORTANT]
-> ⭐⭐ Remember to use the **$${\color{green}DEVWKS-1314}$$ $${\color{green}Pod}$$** Organization ⭐⭐
+> ⭐⭐ Remember to use the **$${\color{green}CO-TECHDAY }$$ $${\color{green}Pod}$$** Organization ⭐⭐
 
 1. Under the Automation menu, select Targets.  
 
@@ -116,12 +116,12 @@ The Exchange allows you to install workflows that are created and supported by C
 ![run workflow screenshot](/media/9.png)  
 
 3. The workflow is created with case sensitive input variables.  You will be prompted to fill out the information needed to setup wireless in this network.  Use the following info:
-   + Target: Select your target created earlier Meraki-DEVWKS1314-X
+   + Target: Select your target created earlier Meraki-COTECHDAY-X
    + PSK Password:  Should be filled out when installing the workflow.
    + Encryption Mode:  wpa
    + SSID Number: 0
    + Wireless SSID Name:  Cisco Live Wireless
-   + Organization Name or ID:  DEVWKS-1314 Pod X [X is your pod number]
+   + Organization Name or ID:  CO-TECHDAY Pod X [X is your pod number]
    + Network Name:  Copenhagen
    + Enable SSID: True
    + WPA Encryption Mode:  WPA2 only
@@ -536,14 +536,14 @@ Now comes the fun part!  We can trigger workflow automations from many different
   "targets": {
     "definition_target_02SRTK7QOKI315CVE4rU6G6ZJcTAuL0DbbO": {
       "unique_name": "definition_target_02SRTK7QOKI315CVE4rU6G6ZJcTAuL0DbbO",
-      "name": "Meraki-DEVWKS1314-1",
-      "title": "Meraki-DEVWKS1314-1",
+      "name": "Meraki-COTECHDAY-1",
+      "title": "Meraki-COTECHDAY-1",
       "type": "meraki.endpoint",
       "base_type": "target",
       "object_type": "definition_target",
       "properties": {
         "default_runtime_user_id": "definition_runtime_user_02SRTJR4FIS4W4GXKvMWaeqjnLX1mwOQlBM",
-        "display_name": "Meraki-DEVWKS1314-1",
+        "display_name": "Meraki-COTECHDAY-1",
         "host": "api.meraki.com",
         "ignore_proxy": false,
         "is_https_proxy": false,
@@ -585,7 +585,7 @@ Now comes the fun part!  We can trigger workflow automations from many different
  ## Let's import the workflow into your Pod.
 
 > [!IMPORTANT]
-> ⭐⭐ Change your org to use the **$${\color{green}DEVWKS-1314}$$ $${\color{green}Pod}$$** Organization ⭐⭐
+> ⭐⭐ Change your org to use the **$${\color{green}CO-TECHDAY }$$ $${\color{green}Pod}$$** Organization ⭐⭐
 1.  Under the Automation menu, select Workspace to get back to your workflows.
 
 2.  Click on the Actions button and select Import Workflow.
@@ -607,7 +607,7 @@ Now comes the fun part!  We can trigger workflow automations from many different
 6.  Now you can Validate and Run the workflow.
 
 7.  You'll need to input the following values:
-    +  Organization name:  $${\color{green}DEVWKS-1314 \space PodX}$$ [X is your pod number]
+    +  Organization name:  $${\color{green}CO-TECHDAY  \space PodX}$$ [X is your pod number]
     +  Network name:  $${\color{green}Copenhagen}$$
     +  RF Profile name:  $${\color{green}WIFI \space 7 \space RF \space Profile}$$
     +  5GHz channel width:  $${\color{green}40}$$
