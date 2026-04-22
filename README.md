@@ -29,8 +29,8 @@ The email may take a minute to arrive.  Please enjoy a treat on your table.
 
 > [!NOTE]
 >  ⭐⭐ Your user should have access to two organizations.
->  Please ensure you are using the **CO-TECHDAY Pod*X*** organization and **NOT the zzCLEMEA Bighorn** organization.
->  If you don't see the **CO-TECHDAY Pod*X*** org, please raise your hand.
+>  Please ensure you are using the **F1 Lab *X*** organization and **NOT the zzCLEMEA Bighorn** organization.
+>  If you don't see the **F1 Lab *X*** org, please raise your hand.
 
 ### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:  
@@ -121,7 +121,7 @@ The Exchange allows you to install workflows that are created and supported by C
    + Encryption Mode:  wpa
    + SSID Number: 0
    + Wireless SSID Name:  Cisco Live Wireless
-   + Organization Name or ID:  CO-TECHDAY Pod X [X is your pod number]
+   + Organization Name or ID:  F1 Lab  X [X is your pod number]
    + Network Name:  Copenhagen
    + Enable SSID: True
    + WPA Encryption Mode:  WPA2 only
