@@ -25,12 +25,17 @@ If you are prompted for a code, I'll give it to you as the come in.
 
 ![patience](/media/patience.jpeg)
 
-The email may take a minute to arrive.  Please enjoy a treat on your table.
+The email may take a minute to arrive.  
 
 > [!NOTE]
 >  ⭐⭐ Your user should have access to two organizations.
->  Please ensure you are using the **F1 Lab *X*** organization and **NOT the zzCLEMEA Bighorn** organization.
->  If you don't see the **F1 Lab *X*** org, please raise your hand.
+>  Please ensure you are using the **CVE Lab *X*** organization and **NOT the zzCLEMEA Bighorn** organization.
+>  If you don't see the **CVE Lab *X*** org, please raise your hand.
+
+## Advancements in Workflows
+### Use the Built-in Connection or Build Your Own
+Workflows created a native connection to the current Meraki Org intuitively called "Meraki - Current Org". You can skip this section and utilize the built in target and integrated credentials.  
+* [Skip to: Install and run a pre-built workflow](#install-and-run-your-first-workflow)
 
 ### Generate an API Key
 You'll need to create an API Key if one isn't provided.  API keys are per user and are found here:  
@@ -62,7 +67,7 @@ ready for use.
 
 #### First we'll create a connection to the Meraki environment via API.
 > [!IMPORTANT]
-> ⭐⭐ Remember to use the **$${\color{green}CO-TECHDAY }$$ $${\color{green}Pod}$$** Organization ⭐⭐
+> ⭐⭐ Remember to use the **$${\color{green}CVE Lab }$$ $${\color{green}Pod}$$** Organization ⭐⭐
 
 1. Under the Automation menu, select Targets.  
 
@@ -121,7 +126,7 @@ The Exchange allows you to install workflows that are created and supported by C
    + Encryption Mode:  wpa
    + SSID Number: 0
    + Wireless SSID Name:  Cisco Live Wireless
-   + Organization Name or ID:  F1 Lab  X [X is your pod number]
+   + Organization Name or ID:  CVE Lab  X [X is your pod number]
    + Network Name:  Copenhagen
    + Enable SSID: True
    + WPA Encryption Mode:  WPA2 only
@@ -585,7 +590,7 @@ Now comes the fun part!  We can trigger workflow automations from many different
  ## Let's import the workflow into your Pod.
 
 > [!IMPORTANT]
-> ⭐⭐ Change your org to use the **$${\color{green}CO-TECHDAY }$$ $${\color{green}Pod}$$** Organization ⭐⭐
+> ⭐⭐ Change your org to use the **$${\color{green}CVE Lab }$$ $${\color{green}Pod}$$** Organization ⭐⭐
 1.  Under the Automation menu, select Workspace to get back to your workflows.
 
 2.  Click on the Actions button and select Import Workflow.
@@ -607,7 +612,7 @@ Now comes the fun part!  We can trigger workflow automations from many different
 6.  Now you can Validate and Run the workflow.
 
 7.  You'll need to input the following values:
-    +  Organization name:  $${\color{green}CO-TECHDAY  \space PodX}$$ [X is your pod number]
+    +  Organization name:  $${\color{green}CVE Lab  \space PodX}$$ [X is your pod number]
     +  Network name:  $${\color{green}Copenhagen}$$
     +  RF Profile name:  $${\color{green}WIFI \space 7 \space RF \space Profile}$$
     +  5GHz channel width:  $${\color{green}40}$$
